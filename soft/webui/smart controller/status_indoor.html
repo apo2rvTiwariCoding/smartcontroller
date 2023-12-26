@@ -1,0 +1,102 @@
+
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Master Sensor</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="165">Temperature:</td>
+								<td class="stdbold" nowrap="nowrap">--master_t--</td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="165">Humidity:</td>
+								<td class="stdbold" nowrap="nowrap">--master_h--</td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="165">Light:</td>
+								<td class="stdbold" nowrap="nowrap">--master_l--</td>
+							</tr> 
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Zones</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" colspan=2><select name="curzone" size="1" onChange="window.location.href='./engine.pl?mode=--mode--&submode=--submode--&curzone='+this.value;">--zones--</select></td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="165">Temperature:</td>
+								<td class="stdbold" nowrap="nowrap">--zone_t--</td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="165">Humidity:</td>
+								<td class="stdbold" nowrap="nowrap">--zone_h--</td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="165">Light:</td>
+								<td class="stdbold" nowrap="nowrap">--zone_l--</td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="165">Occupation:</td>
+								<td class="stdbold" nowrap="nowrap">--zone_o--</td>
+							</tr> 
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						Zones sensors max and min values.<br><br>Average occupation level for all zones.
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				<input name="refresh" value="Refresh" class="stdbutton" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--&curzone=--curzone--';" type="button">&nbsp; &nbsp;
+			</td>
+			<td class="Footer3">--usermode--</td>
+		</tr>
+	</tbody></table>

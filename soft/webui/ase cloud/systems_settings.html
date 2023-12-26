@@ -1,0 +1,64 @@
+<form action="./engine.pl" method=POST><input type=hidden name="mode" value="--mode--"><input type=hidden name="submode" value="--submode--"><input type=hidden name="action" value="save">
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">DB Sync Settings</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="200">Interval between DB Sync retries:</td>
+								<td>
+									<input name="sync_min" size="3" maxlength="6" value="--sync_min--" type="text">&nbsp;minutes&nbsp;&nbsp;(1 - 60)
+								</td>
+							</tr>
+							<tr>
+								<td height="28" width="200">Preferred DB Synchronization method:</td>
+								<td align="left">
+									<input id="sync_pref" name="sync_pref" value="0" --sync_pref0-- type="radio"><b>Secure HTTPS connection</b><br>
+									<input id="sync_pref" name="sync_pref" value="1" --sync_pref1-- type="radio"><b>Direct MySQL connection</b>
+								</td>
+							</tr>
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						Cloud connection settings
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				<input name="save" value="Save Settings" class="stdbutton" type="SUBMIT">
+				<input name="cancel" value="Cancel Changes" class="stdbutton" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--';" type="button"> &nbsp;  &nbsp;
+			</td>
+			<td class="Footer3"></td>
+		</tr>
+	</tbody></table>
+</form>

@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=NetP10_2 Pin=P15-2
+Removed Pin From Net: NetName=GND Pin=P15-3
+Removed Pin From Net: NetName=GND Pin=U1-21
+Removed Pin From Net: NetName=GND Pin=U3-21
+Removed Pin From Net: NetName=GND Pin=U5-21
+Change Component DesignItemId : Designator=P15 Old DesignItemId=Header 3 New DesignItemId=Header 4
+Change Component Comment : Designator=P15 Old Comment=Header 3 New Comment=Header 4
+Added Component: Designator=P23(2pin_socket)
+Added Component: Designator=P24(2pin_socket)
+Added Pin To Net: NetName=SDA Pin=P15-2
+Added Pin To Net: NetName=SCL Pin=P15-3
+Added Pin To Net: NetName=GND Pin=P15-4
+Added Pin To Net: NetName=NetC70_1 Pin=P23-1
+Added Pin To Net: NetName=GND Pin=P23-2
+Added Pin To Net: NetName=NetC70_1 Pin=P24-1
+Added Pin To Net: NetName=GND Pin=P24-2
+Added Member To Class: ClassName=smart Member=Component P23 Header 2
+Added Member To Class: ClassName=smart Member=Component P24 Header 2

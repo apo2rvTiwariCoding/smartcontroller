@@ -1,0 +1,186 @@
+<form action="./engine.pl" method=POST><input type=hidden name="mode" value="--mode--"><input type=hidden name="submode" value="--submode--"><input type=hidden name="action" id="action" value="save">
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">Local device selection</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td class="stdbold" nowrap="nowrap"><select multiple size=5 name="device_id" size="1" onChange="window.location.href='./engine.pl?mode=--mode--&submode=--submode--&device_id='+this.value;">
+									--devlist--
+								</select></td>
+								<td valign=top>&nbsp;&nbsp;&nbsp;--devdel--<input name="Refresh" value="Refresh List" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--&device_id=--devid--';" type="button"></td>
+							</tr>--updmsg--
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Device Parameters</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="138">Device status:</td>
+								<td class="stdbold" nowrap="nowrap"><select name="status" size="1">
+									--status--
+								</select></td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Device description:</td>
+								<td>
+									<input name="description" size="32" maxlength="200" value="--description--" type="text"--descdis-->
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Device type:</td>
+								<td class="stdbold" nowrap="nowrap"><select name="type" size="1" onChange="document.getElementById('action').value = 'reloadd'; this.form.submit();"--descdis-->
+									--type--
+								</select></td>
+							</tr>
+-=interface=-
+							<tr>
+								<td nowrap="nowrap" width="138">Interface type:</td>
+								<td class="stdbold" nowrap="nowrap"><select name="interface" size="1" onChange="document.getElementById('action').value = 'reloadi'; this.form.submit();"--descdis-->
+									--interface--
+								</select></td>
+							</tr>
+-=interface=-
+-=adcaddr=-
+							<tr>
+								<td nowrap="nowrap" width="138">ADC number:</td>
+								<td class="stdbold" nowrap="nowrap"><select name="address" size="1"--descdis-->
+									--adcaddr--
+								</select></td>
+							</tr>
+-=adcaddr=-
+-=period=-
+							<tr>
+								<td nowrap="nowrap" width="138">Reading interval in sec:</td>
+								<td nowrap="nowrap"><select name="period" size="1">
+									--period--
+								</select>&nbsp;&nbsp;&nbsp;<small></td>
+							</tr>
+-=period=-
+-=thresholds=-
+							<tr>
+								<td nowrap="nowrap" width="138">Low threshold raw value:</td>
+								<td nowrap="nowrap"><input name="lowthres" size="4" maxlength="10" value="--lowthres--" type="text">&nbsp;&nbsp;&nbsp;<small>0 = no threshold</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">High threshold raw value:</td>
+								<td nowrap="nowrap"><input name="highthres" size="4" maxlength="10" value="--highthres--" type="text">&nbsp;&nbsp;&nbsp;<small>0 = no threshold</td>
+							</tr>
+-=thresholds=-
+-=addr=-
+							<tr>
+								<td nowrap="nowrap" width="138">Interface address:</td>
+								<td>
+									<input name="address" size="16" maxlength="200" value="--address--" type="text"--descdis-->&nbsp;&nbsp;&nbsp;<small>
+								</td>
+							</tr>
+-=addr=-
+-=cocorr=-
+							<tr>
+								<td nowrap="nowrap" width="138">CO Correction value:</td>
+								<td>
+									<input name="speed" size="4" maxlength="10" value="--speed--" type="text"--descdib-->&nbsp;&nbsp;&nbsp;<small>
+								</td>
+							</tr>
+-=cocorr=-
+-=relay=-
+							<tr>
+								<td nowrap="nowrap" width="138">Relay connected:</td>
+								<td nowrap="nowrap"><select name="relay" size="1" --relaydis-->
+									--relay--
+								</select>&nbsp;&nbsp;&nbsp;<small></td>
+							</tr>
+-=relay=-
+-=speed=-
+							<tr>
+								<td nowrap="nowrap" width="138">Bus speed in kbps:</td>
+								<td>
+									<input name="speed" size="4" maxlength="10" value="--speed--" type="text"--descdis-->&nbsp;&nbsp;&nbsp;<small>0 = auto detection
+								</td>
+							</tr>
+-=speed=-
+							<tr>
+								<td nowrap="nowrap" width="138">Alarm status:</td>
+								<td class="stdbold" nowrap="nowrap"><select name="alarm" size="1">
+									--alarm--
+								</select></td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Alarm/event severity:</td>
+								<td class="stdbold" nowrap="nowrap"><select name="severity" size="1">
+									--severity--
+								</select></td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Device manufacturer:</td>
+								<td>
+									<input name="maker" size="32" maxlength="200" value="--maker--" type="text"--descdis-->
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Device model:</td>
+								<td>
+									<input name="model" size="32" maxlength="200" value="--model--" type="text"--descdis-->
+								</td>
+							</tr>
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						Smart Controller local sensors and controls
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				<input name="save" value="Save Settings" class="stdbutton" type="SUBMIT">
+				<input name="cancel" value="Cancel Changes" class="stdbutton" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--&device_id=--devid--';" type="button"> &nbsp;  &nbsp;
+			</td>
+			<td class="Footer3">--usermode--</td>
+		</tr>
+	</tbody></table>
+</form>

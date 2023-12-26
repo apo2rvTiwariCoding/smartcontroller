@@ -1,0 +1,85 @@
+<form action="./engine.pl" method=POST><input type=hidden name="mode" value="--mode--"><input type=hidden name="submode" value="--submode--"><input type=hidden name="action" id="action" value="save">
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">Zigbee HA</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td class="stdbold" nowrap="nowrap" width="110">ZB Hex Address</td>
+								<td class="stdbold" nowrap="nowrap" width="130">Cluster ID</td>
+								<td class="stdbold" nowrap="nowrap" width=90>Return Value</td>
+								<td class="stdbold" nowrap="nowrap" width=60>Status</td>
+								<td class="stdbold" nowrap="nowrap">Command</td>
+							</tr> 
+							--senslist--
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Refresh settings</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="165">Page reload interval</td>
+								<td class="stdbold" nowrap="nowrap" width=160><input name="rinterval" value="--rinterval--" size="3" maxlength="4" type="text">&nbsp;&nbsp;seconds</td>
+								<td nowrap="nowrap">1 - 9999 sec, 0 to stop reload</td>
+							</tr> 
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						This page is to help exercise the Cluster commands to the SmartEnt router or SmartEnt Plug+router
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				<input name="save" value="Save Settings" class="stdbutton" type="SUBMIT">
+				<input name="cancel" value="Refresh Values" class="stdbutton" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--';" type="button"> &nbsp;  &nbsp;
+			</td>
+			<td class="Footer3">--usermode--</td>
+		</tr>
+	</tbody></table>
+</form>

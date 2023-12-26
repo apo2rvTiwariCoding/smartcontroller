@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<link rel="stylesheet" type="text/css" id="menu" href="menu.css">
+<link rel="stylesheet" type="text/css" id="webframe" href="webframe.css">
+<link rel="stylesheet" type="text/css" href="ase2014.css">
+<script language="javascript" type="text/javascript">
+function init() {
+}
+</script>
+<title>ASE 2014 Web UI : Login</title>
+</head>
+
+<body class="BodyStyle" onload="init()">
+<form action="./engine.pl" method=post name=login_form>
+<input type=hidden name="action" value="login">
+<div class="BackgroundStyle"><img src="oceanBackground.jpg" width="100%"></div>
+<div align="center">
+	<table class="showMenuTable">
+		<tbody>
+			<tr>
+				<td><img style="cursor: pointer;" onmouseover="this.style.cursor='pointer'" onclick="window.open('http://www.ase-energy.ca')" id="HeadLogoImage" src="ASE-Logo.png" title="ASE Smart Energy" alt="ASE Smart Energy" height="52px" width="249px"></td>
+				<td><br><span class="HeadTitleLogo"></span><br><span class="HeadSubtitle"></span></td><td class="fwv" valign="bottom"></td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<table class="Model" border="0" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<td class="Lmodel">RetroSAVE Smart Controller Web Panel</td>
+								<td class="Lmodel">v.--version--</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3"><br><div id="DIV_mainmenu">
+					<div class="MainOpacity2"></div>
+					<div class="MainMenuBorder0"></div>
+					<div class="MainMenuBorder1"></div>
+					<div class="MainMenuBorder2">
+						<center><bR><br><br>
+						<table border="0" cellpadding="0" cellspacing="0"><tbody>
+							<tr style="height:30px" align="center">
+								<td height="28" width="122" class=stdwbold align=left>Username:</td>
+								<td nowrap="nowrap">
+									<input name="user" size="20" maxlength="30" value="--username--" type="text">
+								</td>
+							</tr>
+							<tr style="height:30px" align="center">
+								<td height="28" width="122" class=stdwbold align=left>Password:</td>
+								<td nowrap="nowrap">
+									<input name="pass" size="20" maxlength="30" value="--password--" type="password">
+								</td>
+							</tr>
+							<tr style="height:30px" align="center">
+								<td height="28" width="122" class=stdwnorm align=left>Remember Username:</td>
+								<td class="stdwnorm" nowrap="nowrap" align=left>
+									<input id="savelogin" name="savelogin" type="checkbox" --savelogin-->
+								</td>
+							</tr>
+							<tr style="height:30px" align="center">
+								<td height="28" colspan=2>
+									<input name="login" value="Enter Web Panel" class="stdbutton" onclick="this.submit();" type="SUBMIT">
+								</td>
+							</tr>
+							<tr style="height:30px" align="center">
+								<td height="28" colspan=2  class=stdwnorm>--logmessage--</td>
+							</tr>
+						</tbody></table>
+						</center>&nbsp;
+					</div>
+
+					<div class="MainMenuBorder1"></div>
+					<div class="MainMenuBorder3"></div>
+				</div><br></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td>Copyright &copy; 2014 ASE Smart Energy Inc. All rights reserved
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+</form>
+</body>
+</html>

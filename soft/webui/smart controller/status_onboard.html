@@ -1,0 +1,92 @@
+
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">Onboard Sensors</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="165">Supply Duct Temperature:</td>
+								<td class="stdbold" nowrap="nowrap" width="100">--t_supply_duct--</td>
+								<td nowrap="nowrap">Source: <b>--t_supply_duct_src--</b></td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="165">Supply Duct Humidity:</td>
+								<td class="stdbold" nowrap="nowrap" colspan=2>--h_supply_duct--</td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="165">Supply Duct Air Velocity:</td>
+								<td class="stdbold" nowrap="nowrap" colspan=2>--air_vel--</td>
+							</tr>
+							<tr><td colspan=2><div class="in10"></div></td></tr>
+							<tr>
+								<td nowrap="nowrap" width="165">Return Duct Temperature:</td>
+								<td class="stdbold" nowrap="nowrap">--t_return_duct--</td>
+								<td nowrap="nowrap">Source: <b>--t_return_duct_src--</b></td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="165">Return Duct Humidity:</td>
+								<td class="stdbold" nowrap="nowrap" colspan=2>--h_return_duct--</td>
+							</tr> 
+							<tr><td colspan=2><div class="in10"></div></td></tr>
+							<tr>
+								<td nowrap="nowrap" width="165">CO Reading:</td>
+								<td class="stdbold" nowrap="nowrap">--co--</td>
+								<td nowrap="nowrap">Source: <b>--co_src--</b></td>
+							</tr>
+							<tr><td colspan=2><div class="in10"></div></td></tr>
+							<tr>
+								<td nowrap="nowrap" width="165">Furnace Room Temperature:</td>
+								<td class="stdbold" nowrap="nowrap">--froom_t--</td>
+								<td nowrap="nowrap">Source: <b>--froom_t_src--</b></td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="165">Furnace Room Humidity:</td>
+								<td class="stdbold" nowrap="nowrap" colspan=2>--froom_h--</td>
+							</tr>
+							<tr><td colspan=2><div class="in10"></div></td></tr>
+							<tr>
+								<td nowrap="nowrap" width="165">Last Update:</td>
+								<td class="stdbold" nowrap="nowrap" colspan=2>--smart_upd--</td>
+							</tr> 
+						</tbody></table>
+						<br>
+					</td>
+				</tr></tbody>
+			</table>
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						Current values of sensors connected directly to Smart Controller or located onboard.
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				<input name="refresh" value="Refresh" class="stdbutton" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--';" type="button">&nbsp; &nbsp;
+			</td>
+			<td class="Footer3">--usermode--</td>
+		</tr>
+	</tbody></table>

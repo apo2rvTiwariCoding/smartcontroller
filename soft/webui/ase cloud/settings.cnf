@@ -1,0 +1,13 @@
+# database information. must be filled correctly
+
+dbhost = localhost
+dbname = cloud2014
+dbuser = root
+dbpass = casio
+
+# some constants
+
+debug = 1
+advanced = 1
+
+# end

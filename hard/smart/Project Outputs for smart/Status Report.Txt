@@ -1,0 +1,21 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [smart.PrjPCB]
+   Generated File[smart.GTL]
+   Generated File[smart.GBL]
+   Generated File[smart.GTO]
+   Generated File[smart.GTP]
+   Generated File[smart.GTS]
+   Generated File[smart.GBS]
+   Generated File[smart.GBP]
+   Generated File[smart.GBO]
+   Generated File[smart.GKO]
+   Generated File[smart.RUL]
+   Generated File[smart.EXTREP]
+   Generated File[smart.REP]
+
+
+Files Generated   : 12
+Documents Printed : 0
+
+Finished Output Generation At 21:05:52 On 26.12.2014

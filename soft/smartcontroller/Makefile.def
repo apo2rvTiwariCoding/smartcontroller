@@ -1,0 +1,33 @@
+# The following variables can be overriden by specifying them on the command line.
+BUILD_TYPE := debug # or release
+BUILD_TYPE := $(strip $(BUILD_TYPE))
+#HOST := windows or linux
+HOST := $(strip $(HOST))
+
+
+PROJECT_DIR := .
+BUILD_DIR := obj
+
+# Toolchain
+ifeq ($(HOST),linux)
+else ifeq ($(HOST),windows)
+CC := C:/SysGCC/raspberry/bin/arm-linux-gnueabihf-gcc.exe
+CXX := C:/SysGCC/raspberry/bin/arm-linux-gnueabihf-g++.exe
+LD := $(CXX)
+AR := C:/SysGCC/raspberry/bin/arm-linux-gnueabihf-ar.exe
+OBJCOPY := C:/SysGCC/raspberry/bin/arm-linux-gnueabihf-objcopy.exe
+else
+$(error Not supported)
+endif
+
+# Compiler and liker flags
+ifeq ($(BUILD_TYPE),debug)
+DEFS := -DDEBUG -DLOG_ENABLED -DUDF_USE_PIPE
+INCS_DIRS :=
+CFLAGS := -ggdb -ffunction-sections -O0 -pedantic -Wall
+CXXFLAGS := -ggdb -ffunction-sections -O0 -std=c++0x -pedantic -Wall
+LDFLAGS := -pthread
+LIBS := 
+else
+$(error Not defined yet)
+endif

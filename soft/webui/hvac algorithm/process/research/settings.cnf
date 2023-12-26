@@ -1,0 +1,17 @@
+# database information. must be filled correctly
+
+dbhost = localhost
+# dbname = smart3
+# dbuser = smart3
+# dbpass = three
+dbname = smart4
+dbuser = smart4
+dbpass = smartfour
+
+# some constants
+
+sysid = 4
+
+# license information will be here soon
+
+license =

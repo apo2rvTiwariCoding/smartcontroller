@@ -1,0 +1,303 @@
+<form action="./engine.pl" method=POST name="eventForm"><input type=hidden name="mode" value="--mode--"><input type=hidden name="submode" value="--submode--"><input type=hidden name="action" value="save"><input type=hidden name="netip_id" value="--netip_id--"><input type=hidden name="wanrest" value="no">
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">Ethernet</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td height="28" width="138">
+									Address Type:
+								</td>
+								<td align="left">
+									<input id="lan_dhcp" name="lan_dhcp" value="0" --lan_dhcp0-- type="radio"><b>Static</b>
+									<input id="lan_dhcp" name="lan_dhcp" value="1" --lan_dhcp1-- type="radio"><b>Dynamic</b>
+								</td>
+							</tr>
+							<tr>
+								<td height="28" width="138">Ethernet IP Address:</td>
+								<td align="left" width="316">
+									<input name="lan_ip0" class="ipnum" value="--lan_ip0--" size="3" maxlength="3" type="text">.
+									<input name="lan_ip1" class="ipnum" value="--lan_ip1--" size="3" maxlength="3" type="text">.
+									<input name="lan_ip2" class="ipnum" value="--lan_ip2--" size="3" maxlength="3" type="text">.
+									<input name="lan_ip3" class="ipnum" value="--lan_ip3--" size="3" maxlength="3" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td height="28">Subnet Mask:</td>
+								<td align="left">
+									<input name="lan_netmask0" class="ipnum" value="--lan_netmask0--" size="3" maxlength="3" type="text">.
+									<input name="lan_netmask1" class="ipnum" value="--lan_netmask1--" size="3" maxlength="3" type="text">.
+									<input name="lan_netmask2" class="ipnum" value="--lan_netmask2--" size="3" maxlength="3" type="text">.
+									<input name="lan_netmask3" class="ipnum" value="--lan_netmask3--" size="3" maxlength="3" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td height="28" width="138">Default Gateway:</td>
+								<td align="left" width="316">
+									<input name="lan_gateway0" class="ipnum" value="--lan_gateway0--" size="3" maxlength="3" type="text">.
+									<input name="lan_gateway1" class="ipnum" value="--lan_gateway1--" size="3" maxlength="3" type="text">.
+									<input name="lan_gateway2" class="ipnum" value="--lan_gateway2--" size="3" maxlength="3" type="text">.
+									<input name="lan_gateway3" class="ipnum" value="--lan_gateway3--" size="3" maxlength="3" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td height="28" width="138">DNS Server primary:</td>
+								<td align="left" width="316">
+									<input name="dns10" class="ipnum" value="--dns10--" size="3" maxlength="3" type="text">.
+									<input name="dns11" class="ipnum" value="--dns11--" size="3" maxlength="3" type="text">.
+									<input name="dns12" class="ipnum" value="--dns12--" size="3" maxlength="3" type="text">.
+									<input name="dns13" class="ipnum" value="--dns13--" size="3" maxlength="3" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td height="28" width="138">DNS Server secondary:</td>
+								<td align="left" width="316">
+									<input name="dns20" class="ipnum" value="--dns20--" size="3" maxlength="3" type="text">.
+									<input name="dns21" class="ipnum" value="--dns21--" size="3" maxlength="3" type="text">.
+									<input name="dns22" class="ipnum" value="--dns22--" size="3" maxlength="3" type="text">.
+									<input name="dns23" class="ipnum" value="--dns23--" size="3" maxlength="3" type="text">
+								</td>
+							</tr>
+						</tbody></table>
+						<br>
+					</td>
+				</tr></tbody>
+			</table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">WiFi Client</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="138">Home Router Name:</td>
+								<td class="stdbold" nowrap="nowrap"><select name="wan_ap_name" size="1">
+									--wan_ap_name--
+								</select></td>
+								<td align=left>&nbsp;&nbsp;<input name="ScanWiFi" value="Scan Now" onclick="topmsg_obj.style.visibility='visible';window.location.href='./engine.pl?mode=--mode--&submode=--submode--&action=scanwifi';" type="button">&nbsp;--wan_ap_msg--</td>
+							</tr>
+							<tr>
+								<td>Security Key:</td>
+								<td>
+									<input name="wan_ap_key" size="16" maxlength="64" value="--wan_ap_key--" type="text">
+								</td>
+								<td align=left>&nbsp;&nbsp;<input name="SaveApply" value="Save and Apply" onclick="topmsg_obj.style.visibility='visible';document.eventForm.wanrest.value='yesa';document.eventForm.submit();" type="button"></td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" valign=center>Wireless Client Status :</td>
+								<td nowrap="nowrap" valign=center align=left>&nbsp;--wan_ap_status--</td>
+								<td align=left valign=top>&nbsp;&nbsp;<input name="Refresh" value="Refresh" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--';" type="button"></td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" colspan=3><div class=in10></div></td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" colspan=3>Same channel set automatically to WiFi AP and Client</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" colspan=3><div class=in5></div></td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" colspan=3><a href="http://smart:8080/engine.pl?mode=system&submode=advanced">Complete system restart</a> recommended after making changes to WAN settings</td>
+							</tr>
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">WiFi Access Point</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="138">Smart Controller AP Name:</td>
+								<td>
+									<input name="ap_name" size="16" maxlength="64" value="--ap_name--" type="text">
+								</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Channel:</td>
+								<td class="stdbold" nowrap="nowrap"><select name="ap_channel" size="1">
+									--ap_channel--
+								</select></td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Security Protocol:</td>
+								<td class="stdbold" nowrap="nowrap"><select name="ap_protocol" size="1">
+									--ap_protocol--
+								</select></td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Security Key:</td>
+								<td>
+									<input name="ap_security" size="16" maxlength="10" value="--ap_security--" type="text">
+								</td>
+								<td align=left>&nbsp;&nbsp;<input name="SaveApply2" value="Save and Apply" onclick="topmsg_obj.style.visibility='visible';document.eventForm.wanrest.value='yesb';document.eventForm.submit();" type="button"></td>
+							</tr>
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Time Servers</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="138">Time server primary:</td>
+								<td class="stdbold" nowrap="nowrap"><select name="timeserver1" size="1">
+									--timeserver1--
+								</select></td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Time server secondary:</td>
+								<td class="stdbold" nowrap="nowrap"><select name="timeserver2" size="1">
+									--timeserver2--
+								</select></td>
+							</tr>
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Cell Modem (2G/3G)</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="138">Modem connected:</td>
+								<td class="stdbold" nowrap="nowrap">--cell_modem--</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Model & Type:</td>
+								<td class="stdbold" nowrap="nowrap">--cell_type--</td>
+							</tr>
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">ASE Cloud Servers</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="138" valign=top>Available servers:</td>
+								<td align="left" nowrap="nowrap">
+									<select size="2" name="cloud">
+										<option value="1">--cloud1--</option><option value="2">--cloud2--</option>
+									</select>
+								</td>
+								<td align="left" valign=top nowrap="nowrap">&nbsp;&nbsp;<input name="ScanCloud" value="Update Servers List" onclick="ScanCloud();" type="button"></td>
+							</tr>
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						Wired and wireless IP network configuration
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				<input name="save" value="Save Settings" class="stdbutton" type="SUBMIT">
+				<input name="cancel" value="Cancel Changes" class="stdbutton" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--';" type="button"> &nbsp;  &nbsp;
+			</td>
+			<td class="Footer3">--usermode--</td>
+		</tr>
+	</tbody></table>
+</form>

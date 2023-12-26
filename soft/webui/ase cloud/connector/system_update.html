@@ -1,0 +1,64 @@
+<form action="./engine.pl" method=POST name="updateForm"><input type=hidden name="mode" value="--mode--"><input type=hidden name="submode" value="--submode--"><input type=hidden name="action" value="save">
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">Software Updates</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="138">Current Software Version:<br>&nbsp;</td>
+								<td class="stdbold" nowrap="nowrap">--sw_version--<br>&nbsp;</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138" valign=top>Upgrade servers:</td>
+								<td align="left" nowrap="nowrap">
+									<select size="2" name="cloud">
+										<option value="1">--cloud1--</option><option value="2">--cloud2--</option>
+									</select>&nbsp;<input name="CheckUpdate" value="Check for Updates" onclick="document.updateForm.submit();" type="button">
+								</td>
+							</tr>
+							--updmessage--
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						System software updates and upgrades
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				<input name="save" value="Save Settings" class="stdbutton" type="SUBMIT">
+				<input name="cancel" value="Cancel Changes" class="stdbutton" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--';" type="button"> &nbsp;  &nbsp;
+			</td>
+			<td class="Footer3">--usermode--</td>
+		</tr>
+	</tbody></table>
+</form>

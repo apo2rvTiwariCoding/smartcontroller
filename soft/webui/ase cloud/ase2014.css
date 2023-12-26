@@ -1,0 +1,130 @@
+BODY, P, TABLE, TD, UL, OL, LI, DD, INPUT, SELECT
+         { color:black; font: normal 11px Arial,Helvetica,sans-serif; }
+.bighead { background: black; color:white; font: bold 18px Arial,Helvetica,sans-serif; text-align:center; }
+.fwv     { color:white; font: normal 10px Arial,Helvetica,sans-serif; text-align:right; padding-right:8px; }
+.pname   { color:white; font: bold  13px Arial,Helvetica,sans-serif; text-align:right; padding-right:15px; }
+.mname   { background: black; color:white; font: bold   11px Arial,Helvetica,sans-serif; text-align:center; }
+.stdbold { color:black; font: bold 11px Arial,Helvetica,sans-serif;}
+.tlstra  { color:white; font: normal 10px Arial,Helvetica,sans-serif; text-align:right; padding-right:0px; }
+.stdwbold { color:white; font: bold 11px Arial,Helvetica,sans-serif;}
+.stdwnorm { color:white; font: normal 11px Arial,Helvetica,sans-serif;}
+
+.thistab  { color: white; font: bold 11px Arial,Helvetica,sans-serif; text-align:center; padding-bottom:4px;  }
+.menucell { background: black; text-align:center; padding-bottom:4px;}
+
+A.mainmenu         { color: white; font: bold 11px Arial,Helvetica,sans-serif; text-decoration: none; }
+A.mainmenu:hover   { color: #00FFFF;  }
+A.mainmenu:visited { color: white;    }
+
+A.submenu          {
+	color: white;
+	font: normal 11px Arial,Helvetica,sans-serif;
+	text-decoration: none;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+A.submenu:hover    { color: #00FFFF; }
+A.submenu.visited  { color: white; }
+b.separator        { color: white; font: bold 13px Courier; }
+.current          { color: #00FFFF; font: normal 11px Arial,Helvetica,sans-serif; }
+
+.bwhead   { background: black; color:white; font: bold 12px Arial,Helvetica,sans-serif; text-align:right; padding-right:8px; }
+.boldhead { font: bold 11px Arial,Helvetica,sans-serif; text-align:right; padding-top:4px; padding-right:0px; }
+.wpsfont   { background: white; color:black; font: 16px Arial,Helvetica,sans-serif; text-align:left; padding-right:8px; }
+
+
+table.std   { margin-left: 28px; }
+table.stdx {margin-left: 0px;}
+.indent8   { margin-left: 8px; }
+table.leftclose  { margin-left: 24px; }
+hr.std     { text-indent: 12px; color: #cccccc; text-align: center; height:1px; width: 92%;}
+hr.notin   { color: #cccccc; text-align: center; height:1px; width: 100%;}
+hr.notin1  { color: #cccccc; text-align: left; height:1px; width: 96%;}
+.stdbutton { color: #ffffff; background: #333333; font-style:Arial,Helvetica; font-size: 11px; font-weight: 700; padding-bottom:2px; width:150px; border-width :0px}
+.slbutton { color: #ffffff; background: #8C8E8C; font-style:Arial,Helvetica; font-size: 11px; font-weight: 700; padding-bottom:2px;  width:100px; border-width :0px}
+
+
+.num {color: black; font: normal 12px "Courier New",Courier,serif;}	
+.bignum   { color: blue;  font: bold 15px Courier,serif; }
+.smallnum      { color: black;  font: 11px Courier New,Courier,serif; }
+.ipnum  {color: black; font: normal 12px "Courier New",Courier,serif; width:35px;}	
+.hint     { color: blue;   font: bold x-small    Arial,Helvetica,sans-serif; }
+
+th.sub { COLOR: black; font: bold 11px Arial,Helvetica,sans-serif; border-style: solid; border-width:1px; border-color:#2971b9; }
+td.sub { COLOR: black; font: normal 11px Arial,Helvetica,sans-serif; border-style: solid; border-width:1px; border-color:#2971b9; text-align:center; }
+td.inputsub { COLOR: black; font: normal 11px Arial,Helvetica,sans-serif; border-style: solid; border-width:1px; border-color:#2971b9; text-align:left; }
+td.sumcell  { COLOR: black; font: normal 11px Arial,Helvetica,sans-serif; border-style: solid; border-width:1px; border-color:#2971b9; text-align:left; }
+td.noborder  { border-style: solid; border-width: 1px; border-color:#fff; }
+
+b.sub { color:#0000ff; font: bold 15px Arial,Helvetica,sans-serif; }
+.blue { color: #00FFFF; }
+.red { color: #FF0000; }
+
+TABLE.Model
+{
+	width:100%; border-width:1px; border-color:#7AAAC1; border-style:solid;
+}
+TD.Lmodel
+{
+	width:65%; height:35px; vertical-align:middle; text-align:right; padding-right:20px; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold;
+}
+TD.Rmodel
+{
+	width:35%; text-align:center; background-color:#333333; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold;
+}
+TD.Cmodel
+{
+	width:100%; height:35px; vertical-align:middle; text-align:center; padding-right:20px; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold;
+}
+
+TD.righthelptab          {
+	color: white;
+	font: normal 11px Arial,Helvetica,sans-serif;
+	text-decoration: none;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 5px;
+}
+
+.toggle-btn-grp.cssonly * {
+    width:88px;
+    height:23px;
+    line-height:23px;
+}
+
+.toggle-btn-grp.cssonly div {
+    display:inline-block;
+    position:relative;
+    margin:5px 2px;
+}
+
+.toggle-btn-grp.cssonly div label {
+    position:absolute;
+    z-index:0;
+    padding:0;
+    text-align:center;
+    border:solid 1px #D0E0F0 !important; 
+}
+
+.toggle-btn-grp.cssonly div input {
+    position:absolute;
+    z-index:1;
+    cursor:pointer;
+    opacity:0;
+}
+
+.toggle-btn-grp.cssonly div:hover label {
+    border:solid 1px #a0d5dc !important; 
+    background:#f1fdfe;
+}
+
+.toggle-btn-grp.cssonly div input:checked + label {
+    background: #c1f048;
+    border:solid 1px green !important; 
+}
+
+.in2{padding-top:2px;}
+.in5{padding-top:5px;}
+.in10{padding-top:10px;}
+.in15{padding-top:15px;}
+.in20{padding-top:20px;}

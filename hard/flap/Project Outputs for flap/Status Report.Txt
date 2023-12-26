@@ -1,0 +1,21 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [flap.PrjPCB]
+   Generated File[flap.GTL]
+   Generated File[flap.GBL]
+   Generated File[flap.GTO]
+   Generated File[flap.GTP]
+   Generated File[flap.GTS]
+   Generated File[flap.GBS]
+   Generated File[flap.GBP]
+   Generated File[flap.GBO]
+   Generated File[flap.GKO]
+   Generated File[flap.RUL]
+   Generated File[flap.EXTREP]
+   Generated File[flap.REP]
+
+
+Files Generated   : 12
+Documents Printed : 0
+
+Finished Output Generation At 19:47:16 On 16.12.2014

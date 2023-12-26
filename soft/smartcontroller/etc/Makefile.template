@@ -1,0 +1,17 @@
+#
+# The module <Name>
+#
+
+ROOT_DIR := <relative path to the project top directory>
+include $(ROOT_DIR)/Makefile.def
+
+TYPE := <type> # lib, shared_lib, exe, custom
+NAME := <name>
+DEPS :=
+DEPS_DIRS :=
+DEFS +=
+SRCS := <sources, ...>
+SRC_DIRS := <sub-directories, ...>
+LIBS += 
+
+include $(ROOT_DIR)/Makefile.rules

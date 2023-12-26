@@ -1,0 +1,83 @@
+.in2{padding-top:2px;}
+.in5{padding-top:5px;}
+.in10{padding-top:10px;}
+.in15{padding-top:15px;}
+.mainfont {COLOR: #102030; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: normal;}
+.torights {COLOR: #302010; text-decoration: none; font-family: tahoma,arial; font-size: 10px; font-weight: normal; text-align: right;}
+.verfont {COLOR: #DFEFFF; text-decoration: none; font-family: tahoma,arial; font-size: 6px; font-weight: normal; position: absolute; left: 760px; top: 470px;}
+.loadtime {COLOR: #DFEFFF; text-decoration: none; font-family: tahoma,arial; font-size: 6px; font-weight: normal; position: absolute; left: 760px; top: 462px;}
+body {COLOR: #102030; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: normal;}
+TD.tah10bw {COLOR: #F0F0F0; text-decoration: none; font-family: verdana,arial; font-size: 10px; font-weight: bold}
+TD.ver12by {COLOR: #F0F020; text-decoration: none; font-family: verdana,arial; font-size: 12px; font-weight: bold}
+TD.ver13by {COLOR: #F0F020; text-decoration: none; font-family: verdana,arial; font-size: 13px; font-weight: bold}
+TD.ver15byp2 {COLOR: #F0F020; text-decoration: none; font-family: verdana,arial; font-size: 15px; font-weight: bold; padding-top:3px}
+TD.tah10lab {COLOR: #202020; text-decoration: none; font-family: tahoma,arial; font-size: 10px; font-weight: bold; padding: 5px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #D0D0D0; text-align: center;}
+TD.tah10lab10 {COLOR: #202020; width: 10px; text-decoration: none; font-family: tahoma,arial; font-size: 10px; font-weight: bold; padding: 5px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #D0D0D0; text-align: center;}
+TD.tah10lab70 {COLOR: #202020; width: 70px; text-decoration: none; font-family: tahoma,arial; font-size: 10px; font-weight: bold; padding: 5px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #D0D0D0; text-align: center;}
+TD.tah10lab180 {COLOR: #202020; width: 180px; text-decoration: none; font-family: tahoma,arial; font-size: 10px; font-weight: bold; padding: 5px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #D0D0D0; text-align: center;}
+TD.tah10lab200 {COLOR: #202020; width: 200px; text-decoration: none; font-family: tahoma,arial; font-size: 10px; font-weight: bold; padding: 5px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #D0D0D0; text-align: center;}
+TD.tah10lab390 {COLOR: #202020; width: 393px; text-decoration: none; font-family: tahoma,arial; font-size: 10px; font-weight: bold; padding: 5px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #D0D0D0; text-align: center;}
+TD.tah10lab90 {COLOR: #202020; width: 93px; text-decoration: none; font-family: tahoma,arial; font-size: 10px; font-weight: bold; padding: 5px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #F0F0F0; text-align: center;}
+TD.tah12ing70 {COLOR: #202020; width: 69px; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: normal; padding: 3px 6px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #D0D0D0; text-align: left;}
+TD.tah12ing70s {COLOR: #202020; width: 69px; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: normal; padding: 3px 6px; border-width: 1px; border-style: solid; border-color: #80D080; background-color: #30D030; text-align: left;}
+TD.tah12ing180 {COLOR: #202020; width: 179px; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: normal; padding: 3px 6px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #D0D0D0; text-align: left;}
+TD.tah12inw180 {COLOR: #202020; width: 179px; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: normal; padding: 3px 6px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #FFFFFF; text-align: left;}
+TD.tah12ing200 {COLOR: #202020; width: 199px; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: normal; padding: 3px 6px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #D0D0D0; text-align: left;}
+TD.tah12ing200s {COLOR: #202020; width: 199px; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: normal; padding: 3px 6px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #30D030; text-align: left;}
+TD.tah12inw {COLOR: #202020; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: normal; padding: 3px 6px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #FFFFFF; text-align: left;}
+TD.tah12inpw390 {COLOR: #202020; width: 387px; padding: 1px 6px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #FFFFFF; text-align: left; overflow: hidden; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: normal;}
+TD.tah12inpw200 {COLOR: #202020; width: 195px; padding: 1px 6px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #FFFFFF; text-align: left; overflow: hidden;}
+TD.tah12inpw200s {COLOR: #202020; width: 195px; padding: 1px 6px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #E0FFE0; text-align: left; overflow: hidden;}
+TD.tah12inpw200ss {COLOR: #202020; width: 195px; padding: 1px 6px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #80FF90; text-align: left; overflow: hidden;}
+TD.tah12inpc10 {COLOR: #202020; width: 10px; padding: 0px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #FFFFFF; text-align: left; overflow: hidden;}
+TD.tah12inpc10s {COLOR: #202020; width: 10px; padding: 0px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #E0FFE0; text-align: left; overflow: hidden;}
+TD.tah12inpc10r {COLOR: #202020; width: 10px; padding: 0px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #FFE0E0; text-align: left; overflow: hidden;}
+INPUT.tah12bgr {font-family: tahoma,arial; background-color: #FFFFFF; font-size: 12px; font-weight: normal; border-width: 0px; width: 380px}
+INPUT.tah12bgz {font-family: tahoma,arial; background-color: #FFFFFF; font-size: 12px; font-weight: normal; border-width: 0px; width: 190px}
+INPUT.tah12bgns {font-family: tahoma,arial; background-color: #FFFFFF; font-size: 12px; font-weight: normal; border-width: 0px; width: 170px}
+INPUT.tah12bgnn {font-family: tahoma,arial; background-color: #F0F0F0; font-size: 12px; font-weight: normal; border-width: 0px; width: 80px}
+INPUT.tah12bgzs {font-family: tahoma,arial; background-color: #E0FFE0; font-size: 12px; font-weight: normal; border-width: 0px; width: 190px}
+INPUT.tah12bgzss {font-family: tahoma,arial; background-color: #80FF90; font-size: 12px; font-weight: normal; border-width: 0px; width: 190px}
+INPUT.tah12bgc {border-width: 0px; width: 20px; height: 20px; margin: 0px; border: 0px;}
+INPUT.subgrn {border: 1px solid #006; background: #9fc; font-family: tahoma,arial; font-size: 12px; font-weight: normal;}
+INPUT.subblu {border: 1px solid #006; background: #9cf; font-family: tahoma,arial; font-size: 12px; font-weight: normal;}
+INPUT.subred {border: 1px solid #006; background: #f9c; font-family: tahoma,arial; font-size: 12px; font-weight: normal;}
+INPUT.bigcheckbox {border-width: 0px; width: 2em; height: 2em; margin: 0px; border: 0px;}
+INPUT.tah12bgcr {border-width: 0px; width: 20px; height: 20px; margin: 0px; border: 0px; color: #909090;}
+SELECT.tah14b135 {font-family: tahoma,arial; font-size: 14px; font-weight: bold; border-width: 1px; border-color: gray; border-style: solid; width: 140px}
+SELECT.tah16b70 {font-family: tahoma,arial; font-size: 20px; font-weight: bold; border-width: 1px; border-color: gray; border-style: solid; width: 60px}
+SELECT.tah16b90 {font-family: tahoma,arial; font-size: 20px; font-weight: bold; border-width: 1px; border-color: gray; border-style: solid; width: 75px}
+SELECT.tah16b100 {font-family: tahoma,arial; font-size: 20px; font-weight: bold; border-width: 1px; border-color: gray; border-style: solid; width: 90px}
+SELECT.tah16b200 {font-family: tahoma,arial; font-size: 20px; font-weight: bold; border-width: 1px; border-color: gray; border-style: solid; width: 168px}
+SELECT.tah12b90 {font-family: tahoma,arial; font-size: 14px; font-weight: bold; border-width: 0px; border-color: gray; border-style: solid; width: 90px; background-color: #F0F0F0;}
+SELECT.tah12n80 {font-family: tahoma,arial; font-size: 12px; font-weight: normal; border-width: 0px; border-color: gray; border-style: solid; width: 80px; background-color: #D0E0F0;}
+SELECT.tah12n100 {font-family: tahoma,arial; font-size: 12px; font-weight: normal; border-width: 0px; border-color: gray; border-style: solid; width: 100px; background-color: #D0E0F0;}
+SELECT.tah12b80 {font-family: tahoma,arial; font-size: 14px; font-weight: bold; border-width: 0px; border-color: gray; border-style: solid; width: 80px; background-color: #F0F0F0;}
+SELECT.tah12b200 {font-family: tahoma,arial; font-size: 14px; font-weight: normal; border-width: 0px; border-color: gray; border-style: solid; width: 190px; background-color: #F0F0F0;}
+SELECT.tah14b {font-family: tahoma,arial; font-size: 14px; font-weight: bold; border-width: 1px; border-color: gray; border-style: solid; background-color: #F0F0F0;}
+A.szone:visited {COLOR: #101010; text-decoration: none}
+A.szone {COLOR: #101010; text-decoration: none}
+A.szone:hover {COLOR: #206070; text-decoration: underline}
+A.rzone:visited {COLOR: #F01010; text-decoration: none}
+A.rzone {COLOR: #F01010; text-decoration: none}
+A.rzone:hover {COLOR: #802030; text-decoration: underline}
+A.vzone:visited {COLOR: #000010; text-decoration: none}
+A.vzone {COLOR: #000010; text-decoration: none}
+A.vzone:hover {COLOR: #206070; text-decoration: underline}
+A.vzoneg:visited {COLOR: #106010; text-decoration: underline}
+A.vzoneg {COLOR: #106010; text-decoration: underline}
+A.vzoneg:hover {COLOR: #206070; text-decoration: underline}
+TD.tah10lab100 {COLOR: #202020; width: 100px; text-decoration: none; font-family: tahoma,arial; font-size: 10px; font-weight: bold; padding: 5px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #D0D0D0; text-align: center;}
+TD.tah12lab100 {COLOR: #202020; width: 100px; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: bold; padding: 4px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #D0D0D0; text-align: center;}
+TD.tah12law100 {COLOR: #202020; width: 106px; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: bold; padding: 1px; border-width: 1px; border-style: solid; border-color: #808080; background-color: #F0F0F0; text-align: center;}
+TEXTAREA.tah20sm {COLOR: #FFF100; text-decoration: none; font-family: verdana,arial; font-size: 20px; font-weight: bold}
+TEXTAREA.tah20tm {COLOR: #37B34A; text-decoration: none; font-family: verdana,arial; font-size: 20px; font-weight: bold}
+TD.tah14vz220 {COLOR: #000010; width: 220px; text-decoration: none; font-family: tahoma,arial; font-size: 14px; font-weight: bold; padding: 2px; border-width: 0px; border-style: solid; border-color: #304050; text-align: left; overflow: hidden;}
+TD.tah12vz260 {COLOR: #000010; width: 270px; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: normal; padding: 2px; border-width: 0px; border-style: solid; border-color: #304050; text-align: left; overflow: hidden;}
+TD.bene {COLOR: #000000; text-decoration: none; font-family: verdana,arial; font-size: 12px; font-weight: bold; background: #f0f0fe; padding: 2px; border-width: 1px; border-style: solid; border-color: gray}
+TD.newsb {COLOR: #102030; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: normal; background: #f0f0ff; padding: 2px; border-width: 1px; border-style: dotted; border-color: green}
+TD.newsg {COLOR: #000000; text-decoration: none; font-family: tahoma,arial; font-size: 12px; font-weight: normal; background: #dfffef; padding: 2px; border-width: 1px; border-style: solid; border-color: #a0a0ff}
+TD.delim10 {COLOR: #102030; text-decoration: none; height: 10px; background: #ffffff; padding: 1px; border-width: 1px; border-style: solid; border-color: white}
+INPUT.forms12l50b0 {font-family: tahoma,arial; background-color: #D0E0F0; font-size: 12px; font-weight: normal; border-width: 0px; width: 50px}
+INPUT.forms12l150b0 {font-family: tahoma,arial; background-color: #D0E0F0; font-size: 12px; font-weight: normal; border-width: 0px; width: 150px}
+INPUT.forms12l40b0 {font-family: tahoma,arial; background-color: #D0E0F0; font-size: 12px; font-weight: normal; border-width: 0px; width: 40px}

@@ -1,0 +1,139 @@
+<form action="./engine.pl" method=POST><input type=hidden name="mode" value="--mode--"><input type=hidden name="submode" value="--submode--"><input type=hidden name="action" value="save">
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">E-Mail Notifications</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td height="28" width="138">Enable E-Mail Notifications:</td>
+								<td class="stdbold" nowrap="nowrap" width=211>
+									<input id="alarms_email" name="alarms_email" type="checkbox" --alarms_email-->
+								</td>
+								<td class="stdbold" nowrap="nowrap">
+									<input name="TestAlarm" value="Notification Test" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--&action=testemail';" type="button">
+								</td>
+							</tr>
+						</tbody></table><br>
+			 			<table style="BORDER-COLLAPSE: collapse" align="center" border="1" bordercolor="#e7e7e7" cellpadding="0" cellspacing="0" height="24" width="421">
+							<tbody><tr>
+								<td align="center" bgcolor="#cccccc" height="30" width=200><b>E-Mail Address</b></td>
+								<td align="center" bgcolor="#cccccc" height="30" width=55><b>Red</b></td>
+								<td align="center" bgcolor="#cccccc" height="30" width=55><b>Yellow</b></td>
+								<td align="center" bgcolor="#cccccc" height="30" width=55><b>Green</b></td>
+								<td align="center" height="30" width=55  class="noborder">&nbsp;</td>
+							</tr>
+							--emails--
+							<tr style="height:30px" align="center">
+								<td nowrap="nowrap">
+									<input name="en" size="30" maxlength="90" value="" type="text">
+								</td>
+								<td nowrap="nowrap">
+									<input name="ren" type="checkbox">
+								</td>
+								<td nowrap="nowrap">
+									<input name="yen" type="checkbox">
+								</td>
+								<td nowrap="nowrap">
+									<input name="gen" type="checkbox">
+								</td>
+								<td nowrap="nowrap" class="noborder">&nbsp;
+								</td>
+							</tr>
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">SMS Notifications</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td height="28" width="138">Enable SMS Notifications:</td>
+								<td class="stdbold" nowrap="nowrap">
+									<input id="alarms_sms" name="alarms_sms" type="checkbox" --alarms_sms-->
+								</td>
+							</tr>
+						</tbody></table><br>
+			 			<table style="BORDER-COLLAPSE: collapse" align="center" border="1" bordercolor="#e7e7e7" cellpadding="0" cellspacing="0" height="24" width="421">
+							<tbody><tr>
+								<td align="center" bgcolor="#cccccc" height="30" width=200><b>Phone Number</b></td>
+								<td align="center" bgcolor="#cccccc" height="30" width=55><b>Red</b></td>
+								<td align="center" bgcolor="#cccccc" height="30" width=55><b>Yellow</b></td>
+								<td align="center" bgcolor="#cccccc" height="30" width=55><b>Green</b></td>
+								<td align="center" height="30" width=55  class="noborder">&nbsp;</td>
+							</tr>
+							--smss--
+							<tr style="height:30px" align="center">
+								<td nowrap="nowrap">
+									<input name="sn" size="30" maxlength="90" value="" type="text">
+								</td>
+								<td nowrap="nowrap">
+									<input name="rsn" type="checkbox">
+								</td>
+								<td nowrap="nowrap">
+									<input name="ysn" type="checkbox">
+								</td>
+								<td nowrap="nowrap">
+									<input name="gsn" type="checkbox">
+								</td>
+								<td nowrap="nowrap" class="noborder">&nbsp;
+								</td>
+							</tr>
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						Alarms and Notifications configuration sent by E-Mail and SMS
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				<input name="save" value="Save Settings" class="stdbutton" type="SUBMIT">
+				<input name="cancel" value="Cancel Changes" class="stdbutton" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--';" type="button"> &nbsp;  &nbsp;
+			</td>
+			<td class="Footer3">--usermode--</td>
+		</tr>
+	</tbody></table>
+</form>

@@ -1,0 +1,160 @@
+<form action="./engine.pl" name="eventForm" method=POST><input type=hidden name="mode" value="--mode--"><input type=hidden name="submode" value="--submode--"><input type=hidden name="action" value="save"><input type=hidden name="netzb_id" value="--netzb_id--">
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">Information</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="138">MAC Address:</td>
+								<td class="stdbold" nowrap="nowrap">--addr64--</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Short Address:</td>
+								<td class="stdbold" nowrap="nowrap">--addr16--</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Radio Manufacturer ID:</td>
+								<td class="stdbold" nowrap="nowrap">--mfc_id--</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Radio Hardware Version:</td>
+								<td class="stdbold" nowrap="nowrap">--hw_version--</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Radio Firmware Version:</td>
+								<td class="stdbold" nowrap="nowrap">--sw_version--</td>
+							</tr>
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Configuration</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td height="28" width="138">
+									PAN ID Setting:
+								</td>
+								<td align="left">
+									<input id="panid_sel" name="panid_sel" value="1" --panid_sel1-- type="radio" onChange="document.eventForm.submit();"><b>Automatic</b>
+									<input id="panid_sel" name="panid_sel" value="0" --panid_sel0-- type="radio" onChange="document.eventForm.submit();"><b>Manual</b>
+								</td>
+							</tr>
+							<tr>
+								<td>Network PAN ID:</td>
+								<td>
+									<input name="panid" size="16" maxlength="16" value="--panid--" type="text" --panidro-->
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Network RF Channel:</td>
+								<td nowrap="nowrap"><table border=0 cellspacing=0 cellpadding=0><tbody>
+									<tr><td nowrap="nowrap" colspan=4><b><input name="chk[]" type="checkbox" onChange="checkAll()"> Select all channels</td><td nowrap="nowrap" colspan=4><b><input name="unchk[]" type="checkbox" onChange="uncheckAll();"> Select none</td></tr>
+									--channel--
+								</tbody></table></td>
+							</tr>
+							<tr>
+								<td height="28" width="138">Data Encryption:</td>
+								<td align="left">
+									<input id="encryption" name="encryption" value="1" --encryption1-- type="radio" onChange="document.eventForm.submit();"><b>Enabled</b>
+									<input id="encryption" name="encryption" value="0" --encryption0-- type="radio" onChange="document.eventForm.submit();"><b>Disabled</b>
+								</td>
+							</tr>
+							<tr>
+								<td>Security Key (readonly):</td>
+								<td>
+									<input name="sec_key" size="16" maxlength="16" value="--sec_key--" type="text" readonly="readonly">
+								</td>
+							</tr>
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">Operations</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="330" valign=center>Create new ZigBee network using above parameters</td>
+								<td align="left" nowrap="nowrap"><input name="CheckUpdateCRE" value="Proceed" onclick="AreYouSure('create', 'Are you sure to create new ZigBee network?');" type="button">
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="330" valign=center>Restart current ZigBee network</td>
+								<td align="left" nowrap="nowrap"><input name="CheckUpdateRES" value="Proceed" onclick="AreYouSure('reset', 'Hard reset selected.\nThis will require all devices to join again.\nDo you want to continue?');" type="button">
+								</td>
+							</tr>
+							--updmessage--
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						Zigbee Wireless network configuration<br><br>Zigbee channel automatically selected from the table of checked channels, single or multiple
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				<input name="save" value="Save Settings" class="stdbutton" type="SUBMIT">
+				<input name="cancel" value="Cancel Changes" class="stdbutton" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--';" type="button"> &nbsp;  &nbsp;
+			</td>
+			<td class="Footer3">--usermode--</td>
+		</tr>
+	</tbody></table>
+</form>

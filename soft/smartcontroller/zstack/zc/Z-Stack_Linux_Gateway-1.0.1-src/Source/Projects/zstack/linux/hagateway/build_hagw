@@ -1,0 +1,14 @@
+pushd `dirname $0` > /dev/null
+cd ../../../../
+SCRIPTPATH=`pwd`
+cd -
+popd > /dev/null
+export GATEWAY=$SCRIPTPATH
+export NPI_SOURCE=$SCRIPTPATH/
+export PROTOINC=$SCRIPTPATH
+export PROTOLIB=$SCRIPTPATH/protobuf-c-arm/lib
+export PKGS_OUTPUT_DIR=$SCRIPTPATH/out
+export TCLIB=/usr/lib
+make clean
+make all
+cp ./out/GATEWAY_SRVR_arm $SCRIPTPATH/out/Precompiled_arm/servers/

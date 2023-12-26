@@ -1,0 +1,100 @@
+<form action="./engine.pl" method=POST name="eventForm" id="eventForm"><input type=hidden name="mode" value="--mode--"><input type=hidden name="submode" value="--submode--"><input type=hidden name="action" value="save">
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Zone and Period</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="80">Zone:</td>
+								<td nowrap="nowrap" colspan=7><select name="zone" size="1" onChange="document.eventForm.submit();">--zone--</select></td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="80">Dates Range:</td>
+								<td class="stdbold"><select name="year_f" size="1" onChange="document.eventForm.submit();">--year_f--</td>
+								<td class="stdbold"><select name="month_f" size="1" onChange="document.eventForm.submit();">--month_f--</td>
+								<td class="stdbold"><select name="day_f" size="1" onChange="document.eventForm.submit();">--day_f--</td>
+								<td class="stdbold">&nbsp;-&nbsp;</td>
+								<td class="stdbold"><select name="year_t" size="1" onChange="document.eventForm.submit();">--year_t--</td>
+								<td class="stdbold"><select name="month_t" size="1" onChange="document.eventForm.submit();">--month_t--</td>
+								<td class="stdbold"><select name="day_t" size="1" onChange="document.eventForm.submit();">--day_t--</td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="80">Interval:</td>
+								<td nowrap="nowrap" colspan=7><select name="breakout" size="1" onChange="document.eventForm.submit();">--breakout--</select>&nbsp;minutes</td>
+							</tr> 
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Occupancy Stats</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std" width=500><tbody>
+							<tr>
+								<td class="stdbold" align=center width=20%>Time Interval</td>
+								<td class="stdbold" align=center width=11%>Sunday</td>
+								<td class="stdbold" align=center width=11%>Monday</td>
+								<td class="stdbold" align=center width=11%>Tuesday</td>
+								<td class="stdbold" align=center width=13%>Wednesday</td>
+								<td class="stdbold" align=center width=12%>Thursday</td>
+								<td class="stdbold" align=center width=11%>Friday</td>
+								<td class="stdbold" align=center width=11%>Saturday</td>
+							</tr> 
+							--occupancy--
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						Statistical occupancy stats derived from occupancy data received from remotes
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				<input name="refresh" value="Refresh" class="stdbutton" onclick="document.eventForm.submit();" type="button">&nbsp; &nbsp;
+			</td>
+			<td class="Footer3">--usermode--</td>
+		</tr>
+	</tbody></table>
+</form>

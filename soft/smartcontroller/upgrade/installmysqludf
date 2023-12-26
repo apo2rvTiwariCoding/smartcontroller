@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if  [ $# == 3 ]
+then
+	echo "Installing UDF"
+	echo "Removing old file"
+	sudo rm /usr/lib/mysql/plugin/mysqludf_source.so
+	echo "Copying new file"
+	sudo cp ../lib/mysqludf_source.so /usr/lib/mysql/plugin
+	echo "Installing new files"
+	mysql -u $1 -p$2 $3 < ../mux_demux/mysqludf_source/lib_mysqludf_socket.sql
+	echo "Cleaning MySql DB"
+	mysql -u $1 -p$2 $3 < ../../webui/smart\ controller/factory/smart2014_dump_clean.sql
+	echo "Cleaning MySql Triggers"
+        mysql -u $1 -p$2 $3 < ../../webui/smart\ controller/factory/smart2014_dump_clean_triggers_only.sql
+	echo "Done"
+else 
+	echo "No of arguements required = 3"
+	echo "Wrong arguements passed"
+	echo "Exiting"
+fi
+
+

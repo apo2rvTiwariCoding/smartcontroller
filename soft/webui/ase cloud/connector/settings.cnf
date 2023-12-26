@@ -1,0 +1,10 @@
+# database information. must be filled correctly
+
+dbhost = localhost
+
+# some constants
+
+debug = 1
+advanced = 1
+
+# end

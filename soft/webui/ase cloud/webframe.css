@@ -1,0 +1,210 @@
+/**************The following is about HtmlBody***********************/
+.BodyStyle            {background-color:#002748;z-index:0;position:relative;margin:0;padding:0;border:0;}
+.BackgroundStyle      {z-index:-2;position:absolute;left:0;top:0;width:100%;height:100%;background-color:#002748;}
+
+/**************The following is about showHead***********************/
+.HeadTitleLogo {font-weight:normal;font-size:22px;color:#ffffff;vertical-align:bottom;padding-bottom:9px;}
+.HeadSubtitle  {font-weight:normal;font-size:14px;color:#ffffff;}
+
+/**************The following is about showMenu***********************/
+.showMenuTable {
+border: 0; 
+border-collapse:collapse; /*cellspacing="0"*/ 
+width: 840px;  /*width: 840px;*/
+}
+
+.showMenuTable td, .showMenuTable th{padding:0;}   /*cellpadding="0"*/
+
+/**************The following is about Top***********************/
+.Top {
+border: 0;  
+border-collapse : collapse;  /*cellspacing="0"*/ 
+width: 840px;  /*width: 840px;*/
+background-color: #ffffff;	
+}
+
+.Top td, .Top th{padding:0;}   /*cellpadding="0"*/
+
+.Top1 {
+width: 174px;
+height: 15px;
+background-color: #e7e7e7;
+text-align: right;
+background-image: url("temp_bg_03.png"); 
+background-repeat: no-repeat;
+background-position: 100% 100%;
+}
+ 
+.Top2 {
+width: 666px;
+height: 14px;
+background-image: url("");
+}
+
+/**************The following is about dataTable***********************/
+.dataTable {
+border: 0;  
+border-collapse : collapse;  /*cellspacing="0"*/ 
+width: 840px;  /*width: 840px;*/ 
+background-color: #ffffff;	
+}
+
+.dataTable td,  .dataTable th {padding: 0; }   /*cellpadding="0"*/
+
+/**************The following is about help***********************/
+.help, .help_table_sp {
+vertical-align: top;
+background-color: #2F6681;
+background-image:url("temp_bg_help.png");
+width: 120px; 
+text-align: left;
+}               
+
+
+.help td {
+vertical-align: bottom; 
+height: 24px;
+}
+
+/**************The following is about nav***********************/
+.nav, .nav_table_sp {
+border: 0;  
+border-collapse: collapse;  /*cellspacing="0"*/ 
+width: 720px; 
+}
+
+.nav td,  .nav th {padding: 0; }   /*cellpadding="0"*/
+
+.bwhead, .bwhead1 { 
+background: black; 
+color:white; 
+font: bold 12px Arial,Helvetica,sans-serif; 
+text-align:right; 
+padding-right:8px; 
+height: 24px;
+}
+
+.bwhead {
+width: 166px;
+}
+
+.bwhead1 {
+width: 8px;
+}
+
+.nav1, .nav1_table_sp{
+width: 546px;
+} 
+
+.Item1 { 
+font: bold 11px Arial,Helvetica,sans-serif; 
+text-align:right; 
+padding-top:4px; 
+padding-right:0px; 
+width: 166px; 
+background-color: #e7e7e7; 
+vertical-align: top; 
+}   
+
+
+.Item2 {
+width: 8px;
+background: url("temp_bg_03_8px.png");
+}
+
+.Item3, .Item3_table_sp {
+width: 546px;
+vertical-align: top;
+}
+
+/**************The following is about bottom***********************/
+.bottom {
+border: 0;  
+border-collapse : collapse;  /*cellspacing="0"*/ 
+width: 840px;  /*width: 840px;*/
+text-align: center;	
+}
+
+.bottom td,  .bottom th {padding: 0; }   /*cellpadding="0"*/
+
+
+.Footer1 {
+width: 174px; 
+background-color: #000000;
+}
+
+ 
+.Footer2, .Footer2_table_sp {
+background-color: #2F6681;
+height: 32px;
+text-align: right;
+width: 546px; 
+}
+
+
+.Footer3, .Footer3_table_sp {
+background-color: #000000;
+width: 120px; 
+color: white;
+font: normal 11px Arial,Helvetica,sans-serif;
+text-decoration: none;
+} 
+
+
+/**************The following is about table style***********************/
+.popHead, .popHead_wmac {
+border: 0;  
+border-collapse : collapse;  /*cellspacing="0"*/
+padding: 0;  /*cellpadding="0"*/
+width: 660;
+}
+
+.popTable, .popTable_wmac {
+border: 0;  
+border-collapse : collapse;  /*cellspacing="0"*/
+padding: 0;  /*cellpadding="0"*/
+width: 660;
+background-color: #ffffff;
+}
+
+.popTop1 {
+height: 7;
+background-color: #E7E7E7;
+width: 165;
+}
+
+.popTop2, .popTop2_wmac {
+height: 7;
+width: 495;
+}
+
+.popTable_wmac, .popHead_wmac {
+width: 760;
+}
+
+.popTop1_wmac {
+width: 184;
+}
+
+.popTop2_wmac {
+width: 576;
+}
+
+.popData {
+border: 0;  
+border-collapse : separate;
+border-spacing : 3; /*cellspacing="3"*/
+padding: 0;  /*cellpadding="0"*/
+width: 500;
+background-color: #ffffff;
+}
+
+.popData2 {
+border: 0;  
+border-collapse : collapse;
+border-spacing : 4; /*cellspacing="4"*/
+padding: 0;  /*cellpadding="0"*/
+width: 520;
+background-color: #ffffff;
+}
+

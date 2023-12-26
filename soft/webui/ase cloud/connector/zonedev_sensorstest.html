@@ -1,0 +1,156 @@
+<form action="./engine.pl" method=POST><input type=hidden name="mode" value="--mode--"><input type=hidden name="submode" value="--submode--"><input type=hidden name="action" id="action" value="save">
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">Onboard Sensors</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="165">&nbsp;</td>
+								<td class="stdbold" nowrap="nowrap" width=160>Value</td>
+								<td class="stdbold" nowrap="nowrap">Table & column name</td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="165">HTU21D Temperature :</td>
+								<td class="stdbold" nowrap="nowrap">--froom_t--</td>
+								<td nowrap="nowrap">smartsensors.froom_t</td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="165">HTU21D Humidity :</td>
+								<td class="stdbold" nowrap="nowrap">--froom_h--</td>
+								<td nowrap="nowrap">smartsensors.froom_h</td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="165">CO Sensor :</td>
+								<td class="stdbold" nowrap="nowrap">--co--</td>
+								<td nowrap="nowrap">smartsensors.co</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="165">Last table update :</td>
+								<td class="stdbold" nowrap="nowrap">--smart_upd--</td>
+								<td nowrap="nowrap">smartsensors.updated</td>
+							</tr>
+							<tr><td colspan=2><div class="in10"></div></td></tr>
+							<tr>
+								<td nowrap="nowrap" width="165">ADC 1 Port Raw :</td>
+								<td class="stdbold" nowrap="nowrap">--adc1--</td>
+								<td nowrap="nowrap">smartsensorsraw.address = 1</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="165">ADC 2 Port Raw :</td>
+								<td class="stdbold" nowrap="nowrap">--adc2--</td>
+								<td nowrap="nowrap">smartsensorsraw.address = 2</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="165">ADC 3 Port Raw :</td>
+								<td class="stdbold" nowrap="nowrap">--adc3--</td>
+								<td nowrap="nowrap">smartsensorsraw.address = 3</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="165">ADC 4 Port Raw :</td>
+								<td class="stdbold" nowrap="nowrap">--adc4--</td>
+								<td nowrap="nowrap">smartsensorsraw.address = 4</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="165">Last table update :</td>
+								<td class="stdbold" nowrap="nowrap">--smartraw_upd--</td>
+								<td nowrap="nowrap">smartsensorsraw.updated</td>
+							</tr>
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Local sensors</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="165">Sensor type</td>
+								<td class="stdbold" nowrap="nowrap" width=160>Interface & address</td>
+								<td class="stdbold" nowrap="nowrap">Raw value & status</td>
+							</tr> 
+	--sensorslist--
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Refresh settings</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="165">Page reload interval</td>
+								<td class="stdbold" nowrap="nowrap" width=160><input name="rinterval" value="--rinterval--" size="3" maxlength="4" type="text">&nbsp;&nbsp;seconds</td>
+								<td nowrap="nowrap">1 - 9999 sec, 0 to stop reload</td>
+							</tr> 
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						Smart Controller internal and external sensors testing page with automatic values refresh
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				<input name="save" value="Save Settings" class="stdbutton" type="SUBMIT">
+				<input name="cancel" value="Refresh Values" class="stdbutton" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--';" type="button"> &nbsp;  &nbsp;
+			</td>
+			<td class="Footer3">--usermode--</td>
+		</tr>
+	</tbody></table>
+</form>

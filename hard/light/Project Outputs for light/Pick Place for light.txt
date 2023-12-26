@@ -1,0 +1,93 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+R30        0402                 94.425mm       137.3mm      94.425mm       137.3mm      93.925mm       137.3mm  T        360.00 Resistor       
+A1         F_ant                90.739mm      50.898mm       89.85mm      51.025mm      89.596mm      50.771mm  T        180.00 ANT            
+B1         2450BM15A0002       95.0375mm      70.325mm       95.05mm      70.325mm       95.95mm      69.675mm  T        180.00 BALUN          
+BQ1        FC-12M                102.3mm       78.45mm       102.3mm       78.45mm       102.3mm      77.625mm  T         90.00 Crystal        
+BQ2        403C11A32M00000       91.45mm     70.9875mm      91.525mm       71.05mm        90.4mm       70.25mm  T          0.00 Crystal        
+C1         0402                 91.025mm       114.4mm      91.025mm       114.4mm      91.025mm       113.9mm  T         90.00 Capacitor      
+C2         6-0805_L                 97mm     101.325mm          97mm     101.325mm          97mm     100.525mm  B         90.00 Capacitor      
+C3         0402                  96.05mm     145.125mm       96.05mm     145.125mm       96.05mm     145.625mm  T        270.00 Capacitor      
+C4         0402                 98.825mm      143.45mm      98.825mm      143.45mm      98.325mm      143.45mm  T        360.00 Capacitor      
+C5         0402                 91.311mm       83.52mm      91.311mm       83.52mm      91.311mm       83.02mm  T         90.00 Capacitor      
+C6         0402                   99.3mm        81.6mm        99.3mm        81.6mm        99.3mm        81.1mm  T         90.00 Capacitor      
+C7         0402                 90.475mm       73.05mm      90.475mm       73.05mm      90.975mm       73.05mm  T        180.00 Capacitor      
+C8         0402                 92.837mm      71.865mm      92.837mm      71.865mm      92.837mm      72.365mm  B        270.00 Capacitor      
+C9         0402                 92.327mm       83.52mm      92.327mm       83.52mm      92.327mm       83.02mm  T         90.00 Capacitor      
+C10        0402                 95.758mm      72.754mm      95.758mm      72.754mm      95.758mm      73.254mm  T        270.00 Capacitor      
+C11        0402                 94.869mm      72.754mm      94.869mm      72.754mm      94.869mm      73.254mm  T        270.00 Capacitor      
+C12        0402                 96.774mm      72.754mm      96.774mm      72.754mm      96.774mm      73.254mm  T        270.00 Capacitor      
+C13        0402                   99.3mm        74.9mm        99.3mm        74.9mm        98.8mm        74.9mm  T        360.00 Capacitor      
+C14        6-0805_L              90.65mm      109.25mm       90.65mm      109.25mm       90.65mm      108.45mm  T         90.00 Capacitor      
+C15        1206                 99.975mm       115.1mm      99.975mm       115.1mm     101.475mm       115.1mm  T        180.00 Capacitor      
+C16        0603                 96.525mm     109.275mm      96.525mm     109.275mm      96.525mm      110.05mm  T        270.00 Tantal Cap     
+C17        0402                     80mm      152.45mm          80mm      152.45mm          80mm      151.95mm  T         90.00 Capacitor      
+C18        0402                     79mm      152.65mm          79mm      152.65mm          79mm      152.15mm  T         90.00 Capacitor      
+C19        0402                  101.3mm     148.825mm       101.3mm     148.825mm       101.3mm     149.325mm  B        270.00 Capacitor      
+C20        0402                103.182mm      68.379mm     103.182mm      68.379mm     102.682mm      68.379mm  T        360.00 Capacitor      
+C21        0402                   90.6mm      52.575mm        90.6mm      52.575mm        90.6mm      53.075mm  T        270.00 Capacitor      
+C22        0402                 103.65mm       77.85mm      103.65mm       77.85mm      103.65mm       78.35mm  T        270.00 Capacitor      
+C23        0402                 103.65mm      80.125mm      103.65mm      80.125mm      103.65mm      79.625mm  T         90.00 Capacitor      
+C24        0402                 96.775mm          83mm      96.775mm          83mm      97.275mm          83mm  T        180.00 Capacitor      
+C25        0402                101.575mm       93.35mm     101.575mm       93.35mm     101.575mm       93.85mm  T        270.00 Capacitor      
+C26        0402                  90.17mm      68.182mm       90.17mm      68.182mm       90.17mm      67.682mm  T         90.00 Capacitor      
+C27        0402                  91.44mm      68.182mm       91.44mm      68.182mm       91.44mm      67.682mm  T         90.00 Capacitor      
+C28        0402                  101.6mm      67.825mm       101.6mm      67.825mm       102.1mm      67.825mm  B        180.00 Capacitor      
+C29        0402                 100.05mm      84.325mm      100.05mm      84.325mm      100.55mm      84.325mm  B        180.00 Capacitor      
+D1         LED0603               103.1mm      110.75mm       103.1mm      110.75mm     103.775mm      110.75mm  B        180.00 Led            
+D2         LED0603              86.525mm     148.725mm      86.525mm     148.725mm      86.525mm       149.4mm  B        270.00 Led            
+D3         LED0603              91.583mm     148.726mm      91.583mm     148.726mm      91.583mm     149.401mm  B        270.00 Led            
+F1         SF1206S0502          82.225mm     149.725mm      82.225mm     149.725mm      80.675mm     149.725mm  T        360.00 Fuse, slow 0.2A
+L1         6-0805_L             99.725mm     145.375mm      99.725mm     145.375mm      99.725mm     146.175mm  T        270.00 Inductor       
+L2         0402                 98.325mm        81.6mm      98.325mm        81.6mm      98.325mm        82.1mm  T        270.00 Inductor       
+L3         0402                 96.266mm      72.754mm      96.266mm      72.754mm      96.266mm      72.254mm  B         90.00 Inductor       
+P1         BAT_CON              82.875mm      144.28mm      82.875mm      145.55mm      82.875mm      145.55mm  B        270.00 Connector      
+P2         HDR1X4                   92mm      125.96mm          92mm      122.15mm          92mm      122.15mm  B         90.00 Header 4       
+P3         BAT_CON                  83mm      157.13mm          83mm       158.4mm          83mm       158.4mm  B        270.00 Connector      
+P4         HDR2X5               96.012mm       90.17mm      94.742mm       85.09mm      94.742mm       85.09mm  B         90.00 *              
+Q1         SOT-23_N             91.375mm       147.8mm      91.375mm       147.8mm      90.425mm     146.675mm  T         90.00 IRLML6302GTRPBF
+R1         0402                 98.275mm     124.225mm      98.275mm     124.225mm      98.275mm     124.725mm  T        270.00 Resistor       
+R2         0603                 99.975mm     102.025mm      99.975mm     102.025mm        99.2mm     102.025mm  B        360.00 Resistor       
+R3         0402                 93.925mm     148.075mm      93.925mm     148.075mm      93.925mm     147.575mm  T         90.00 Blob           
+R4         0603                 98.275mm      126.85mm      98.275mm      126.85mm      98.275mm     127.625mm  T        270.00 Resistor       
+R5         0603                  94.15mm     123.575mm       94.15mm     123.575mm       94.15mm       122.8mm  T         90.00 Res            
+R6         0603                   92.3mm       109.3mm        92.3mm       109.3mm        92.3mm     110.075mm  T        270.00 Resistor       
+R7         0402                  101.9mm     143.725mm       101.9mm     143.725mm       101.9mm     143.225mm  T         90.00 Resistor       
+R8         0603                  96.75mm      126.85mm       96.75mm      126.85mm       96.75mm     126.075mm  T         90.00 Res            
+R9         0603                 93.725mm     109.275mm      93.725mm     109.275mm      93.725mm      110.05mm  T        270.00 Resistor       
+R10        0603                 95.125mm     109.275mm      95.125mm     109.275mm      95.125mm      110.05mm  T        270.00 Resistor       
+R11        0402                 90.425mm     144.675mm      90.425mm     144.675mm      90.425mm     145.175mm  T        270.00 Resistor       
+R12        0603                 77.875mm     148.575mm      77.875mm     148.575mm      77.875mm      149.35mm  T        270.00 Resistor       
+R13        6-0805_L               74.7mm     154.725mm        74.7mm     154.725mm        73.9mm     154.725mm  T        360.00 Resistor       
+R14        0603                 103.05mm     112.425mm      103.05mm     112.425mm     102.275mm     112.425mm  B        360.00 Resister       
+R15        0402                     79mm     150.525mm          79mm     150.525mm          79mm     150.025mm  T         90.00 Resistor       
+R16        0402                 98.525mm       146.9mm      98.525mm       146.9mm      99.025mm       146.9mm  B        180.00 Resistor       
+R17        0402                   89.6mm        51.8mm        89.6mm        51.8mm        89.6mm        52.3mm  T        270.00 Blob           
+R18        0402                   99.8mm      64.475mm        99.8mm      64.475mm        99.8mm      63.975mm  T         90.00 Resistor       
+R19        0402                 99.775mm       66.75mm      99.775mm       66.75mm      99.775mm       67.25mm  T        270.00 Resistor       
+R20        0603                 88.025mm      148.65mm      88.025mm      148.65mm      88.025mm     147.875mm  B         90.00 Resister       
+R21        0603                 93.175mm     148.659mm      93.175mm     148.659mm      93.175mm     147.884mm  B         90.00 Resister       
+R22        0402                 96.266mm      70.595mm      96.266mm      70.595mm      96.266mm      71.095mm  B        270.00 Resistor       
+R23        0402                 93.075mm        89.7mm      93.075mm        89.7mm      93.075mm        90.2mm  T        270.00 Blob           
+R24        0402                102.825mm       93.35mm     102.825mm       93.35mm     102.825mm       92.85mm  T         90.00 Resistor       
+R25        0603                101.775mm       64.45mm     101.775mm       64.45mm      102.55mm       64.45mm  B        180.00 Resistor       
+R26        0402                100.125mm      85.675mm     100.125mm      85.675mm      99.625mm      85.675mm  B        360.00 Resistor       
+RT1        0603                101.725mm      66.225mm     101.725mm      66.225mm       102.5mm      66.225mm  B        180.00 Thermistor     
+S1         B3U-3000P             102.8mm     89.6125mm       102.8mm      89.625mm       102.8mm        91.4mm  T        270.00 Button         
+S2         TL3330               102.75mm        91.3mm       101.8mm        91.3mm       101.8mm        93.4mm  B        270.00 Button         
+U1         6SON                 97.725mm     145.125mm      97.725mm     145.125mm      98.225mm     145.675mm  T        270.00 TPS62730       
+U2         TSOP14                94.45mm       116.6mm       94.45mm       116.6mm        92.5mm       113.8mm  T         90.00 MSP430         
+U3         SOT23                100.15mm     104.925mm      100.15mm     104.925mm        99.1mm     103.975mm  B        360.00 LM385M3-2.5    
+U4         DFN8                 75.275mm      150.55mm      75.275mm      150.55mm      73.775mm       151.3mm  T        360.00 STC3100        
+U5         QFN127P600-8N         98.85mm     148.925mm       98.85mm     148.925mm      99.825mm     149.575mm  B        180.00 MAX44009       
+U6         QFN6                102.547mm      65.458mm     102.547mm      65.458mm     101.547mm      63.958mm  T         90.00 Hum\Temp Sensor
+U7         QFN40                 93.98mm      77.834mm       93.98mm      77.834mm       96.23mm      80.859mm  T        270.00 CC2530F256     
+VT1        TO5                 95.1355mm    102.1205mm      95.123mm     102.108mm      96.948mm     103.933mm  T          0.00 PIR sensor     
+Q2         SOT-23_N               91.6mm     139.225mm        91.6mm     139.225mm       90.65mm       138.1mm  T         90.00 KST3904MTF     
+R27        0603                 91.875mm     141.975mm      91.875mm     141.975mm        91.1mm     141.975mm  T        360.00 Resister       
+R28        0603                     92mm       135.8mm          92mm       135.8mm          92mm     136.575mm  T        270.00 Resister       
+D4         TSHF5410              96.23mm     140.375mm        97.5mm     140.375mm        97.5mm     140.375mm  T        180.00 Led            
+R29        0402                 92.825mm      95.825mm      92.825mm      95.825mm      92.825mm      95.325mm  T         90.00 Blob           
+P5         HDR1X4               78.385mm       62.35mm      74.575mm       62.35mm      74.575mm       62.35mm  B        360.00 Header 4       
+U8         SO8                  101.15mm     138.875mm      101.15mm     138.875mm      99.245mm     141.325mm  B        270.00 M24M02         
+

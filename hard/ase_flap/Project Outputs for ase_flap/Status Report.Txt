@@ -1,0 +1,25 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [ase_flap.PrjPCB]
+   Generated File[ase_flap.GTL]
+   Generated File[ase_flap.G1]
+   Generated File[ase_flap.G2]
+   Generated File[ase_flap.GBL]
+   Generated File[ase_flap.GPB]
+   Generated File[ase_flap.GPT]
+   Generated File[ase_flap.GTO]
+   Generated File[ase_flap.GTP]
+   Generated File[ase_flap.GTS]
+   Generated File[ase_flap.GBS]
+   Generated File[ase_flap.GBP]
+   Generated File[ase_flap.GBO]
+   Generated File[ase_flap.GKO]
+   Generated File[ase_flap.RUL]
+   Generated File[ase_flap.EXTREP]
+   Generated File[ase_flap.REP]
+
+
+Files Generated   : 16
+Documents Printed : 0
+
+Finished Output Generation At 19:50:21 On 16.12.2014

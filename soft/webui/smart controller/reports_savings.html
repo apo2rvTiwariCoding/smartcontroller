@@ -1,0 +1,115 @@
+<form action="./engine.pl" method=POST name="eventForm" id="eventForm"><input type=hidden name="mode" value="--mode--"><input type=hidden name="submode" value="--submode--"><input type=hidden name="action" value="save">
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Zone and Period</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="80">Dates Range:</td>
+								<td class="stdbold"><select name="year_f" size="1" onChange="document.eventForm.submit();">--year_f--</td>
+								<td class="stdbold"><select name="month_f" size="1" onChange="document.eventForm.submit();">--month_f--</td>
+								<td class="stdbold"><select name="day_f" size="1" onChange="document.eventForm.submit();">--day_f--</td>
+								<td class="stdbold">&nbsp;-&nbsp;</td>
+								<td class="stdbold"><select name="year_t" size="1" onChange="document.eventForm.submit();">--year_t--</td>
+								<td class="stdbold"><select name="month_t" size="1" onChange="document.eventForm.submit();">--month_t--</td>
+								<td class="stdbold"><select name="day_t" size="1" onChange="document.eventForm.submit();">--day_t--</td>
+							</tr> 
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Electricity Savings</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="165">Total electricity used:</td>
+								<td class="stdbold" nowrap="nowrap">--el_used-- kW</td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="165">Total electricity saved:</td>
+								<td class="stdbold" nowrap="nowrap">--el_saved-- kW</td>
+							</tr> 
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table style="  " class="nav">
+				<tbody><tr>
+					<td class="bwhead">Smart Meter Usage</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="165">TBD</td>
+								<td class="stdbold" nowrap="nowrap">&nbsp;</td>
+							</tr> 
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						Electricity savings and Electricity Smart Meter usage calculated by database logs data
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				<input name="refresh" value="Refresh" class="stdbutton" onclick="document.eventForm.submit();" type="button">&nbsp; &nbsp;
+			</td>
+			<td class="Footer3">--usermode--</td>
+		</tr>
+	</tbody></table>
+</form>

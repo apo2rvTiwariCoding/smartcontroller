@@ -1,0 +1,218 @@
+/********** Main Menu Style Definition * START **********/
+
+.MainMenuStyle
+  {
+    border:1px solid #c8d6db; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px;
+  }
+
+.MainMenuBorder0 { border-bottom: 1px solid; margin: 0 3px 0 3px;}
+.MainMenuBorder1 { border-left: 2px solid; border-right: 2px solid; margin: 0 2px 0 2px; }
+.MainMenuBorder2 { border-left: 1px solid; border-right: 1px solid; margin: 0 1px 0 1px; }
+.MainMenuBorder3 { border-top: 1px solid; margin: 0 3px 0 3px;}
+
+.MainMenuBorder0, .MainMenuBorder1, .MainMenuBorder3 { font-size: 0; height: 1px; }
+
+.MainMenuBorder0, .MainMenuBorder1, .MainMenuBorder3, .MainMenuBorder2 { border-color: #c8d6db; }
+
+.MainOpacity1 { padding:0px 835px 20px 0px; }
+.MainOpacity2 { padding:0px 835px 26px 0px; }
+.MainOpacity1IE { padding:0px 835px 5px 0px; }
+.MainOpacity2IE { padding:0px 835px 15px 0px; }
+
+.MainMenuOpacity, .MainOpacity1, .MainOpacity2, .MainOpacity1IE, .MainOpacity2IE
+  {
+    z-index:-1;
+    margin:2px 0px 0px 1px;
+    background-color:#c8d6db;
+    position:absolute;
+    -moz-border-radius:3px; -webkit-border-radius:3px; -khtml-border-radius:5px; /* Round corner for FF & others besides of IE */
+    -moz-opacity:0.15;         /* Opacity for FF */
+    opacity: 0.15;             /* Opacity for Others */
+    filter:alpha(opacity=15);  /* Opacity for IE */
+  }
+
+.MainTab { margin:4px 4px 4px 4px; }
+
+/*** MainTabL1x : MainMenuTab is Active ***/
+
+.MainTabL13
+  {
+    padding:0px 10px 0px 10px;
+    font-weight:bold;
+  }
+
+.MainTabL10 { border-bottom: 1px solid; margin: 0 3px 0 3px; }
+.MainTabL11 { border-left: 2px solid; border-right: 2px solid; margin: 0 1px 0 1px; background-image:url(top_tab_bg.png); }
+.MainTabL12 { border-left: 1px solid; border-right: 1px solid; margin: 0 0px 0 0px; background-image:url(top_tab_bg.png); }
+.MainTabL13 { border-left: 1px solid; border-right: 1px solid; margin: 0 0px 0 0px; background-image:url(top_tab_bg.png); }
+.MainTabL14 { border-left: 1px solid; border-right: 1px solid; margin: 0 0px 0 0px; background-image:url(top_tab_bg.png); }
+.MainTabL15 { border-left: 2px solid; border-right: 2px solid; margin: 0 1px 0 1px; background-image:url(top_tab_bg.png); }
+.MainTabL16 { border-top: 1px solid; margin: 0 3px 0 3px; }
+
+.MainTabL10, .MainTabL11, .MainTabL12, .MainTabL13, .MainTabL14, .MainTabL15, .MainTabL16
+  {
+    border-color: #8499a2;
+    background-position:100%;
+  }
+
+/*** MainTabL2x : MainMenuTab is Captured ***/
+
+.MainTabL23
+  {
+    padding:0px 10px 0px 10px;
+    font-weight:normal;
+  }
+
+.MainTabL20 { border-bottom: 1px solid; margin: 0 3px 0 3px; }
+.MainTabL21 { border-left: 2px solid; border-right: 2px solid; margin: 0 1px 0 1px; background-image:url(top_tab_bg_grndk.png); }
+.MainTabL22 { border-left: 1px solid; border-right: 1px solid; margin: 0 0px 0 0px; background-image:url(top_tab_bg_grndk.png); }
+.MainTabL23 { border-left: 1px solid; border-right: 1px solid; margin: 0 0px 0 0px; background-image:url(top_tab_bg_grndk.png); }
+.MainTabL24 { border-left: 1px solid; border-right: 1px solid; margin: 0 0px 0 0px; background-image:url(top_tab_bg_grndk.png); }
+.MainTabL25 { border-left: 2px solid; border-right: 2px solid; margin: 0 1px 0 1px; background-image:url(top_tab_bg_grndk.png); }
+.MainTabL26 { border-top: 1px solid; margin: 0 3px 0 3px; }
+
+.MainTabL20, .MainTabL21, .MainTabL22, .MainTabL23, .MainTabL24, .MainTabL25, .MainTabL26
+  {
+    border-color: #1fa0d5;
+    background-position:100%;
+  }
+
+/*** MainTabL3x : MainMenuTab is Inactive ***/
+
+.MainTabL33
+  {
+    padding:0px 10px 0px 10px;
+    font-weight:normal;
+  }
+
+.MainTabL30 { border-bottom: 1px solid; margin: 0 2px 0 2px; }
+.MainTabL31 { border-left: 2px solid; border-right: 2px solid; margin: 0 1px 0 1px; }
+.MainTabL32 { border-left: 1px solid; border-right: 1px solid; margin: 0 0px 0 0px; }
+.MainTabL33 { margin: 0 1px 0 1px; }
+.MainTabL34 { border-left: 1px solid; border-right: 1px solid; margin: 0 0px 0 0px; }
+.MainTabL35 { border-left: 2px solid; border-right: 2px solid; margin: 0 1px 0 1px; }
+.MainTabL36 { border-top: 1px solid; margin: 0 2px 0 2px; }
+
+.MainTabL30, .MainTabL31, .MainTabL32, .MainTabL34, .MainTabL35, .MainTabL36
+{
+    -moz-opacity:0;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+
+.MainTabL10, .MainTabL11, .MainTabL12, .MainTabL14, .MainTabL15, .MainTabL16,
+.MainTabL20, .MainTabL21, .MainTabL22, .MainTabL24, .MainTabL25, .MainTabL26,
+.MainTabL30, .MainTabL31, .MainTabL32, .MainTabL34, .MainTabL35, .MainTabL36
+  {
+    font-size: 0;
+    height: 1px;
+  }
+
+/********** Main Menu Style Definition *** END **********/
+
+/********** Sub Menu Style Definition ** START **********/
+
+.SubMenuStyle
+  {
+    border-bottom:4px solid #8db71f;
+  }
+
+.SubTab { margin:0px 1px 0px 0px; }
+
+/*** SubTabL1x : SubMenuTab is Active ***/
+
+.SubTabL13IE
+  {
+    padding:3px 6px 4px 6px;
+    font-weight:bold;
+  }
+
+.SubTabL13
+  {
+    padding:2px 6px 3px 6px;
+    font-weight:bold;
+  }
+
+.SubTabL10 { border-bottom: 1px solid #8499a2; margin: 0 3px 0 3px; }
+.SubTabL11 { border-left: 2px solid; border-right: 2px solid; margin: 0 2px 0 2px; background-image:url(top_tab_bg.png); }
+.SubTabL12 { border-left: 1px solid; border-right: 1px solid; margin: 0 1px 0 1px; background-image:url(top_tab_bg.png); }
+.SubTabL13, .SubTabL13IE { border-left: 1px solid; border-right: 1px solid; margin: 0 1px 0 1px; background-image:url(top_tab_bg.png); }
+
+.SubTabL10, .SubTabL11, .SubTabL12, .SubTabL13, .SubTabL13IE
+  {
+    border-color: #8499a2;
+    background-position:100%;
+  }
+
+/*** SubTabL2x : SubMenuTab is Captured ***/
+
+.SubTabL23IE /* Only for IE ... the adjustment of text's position */
+  {
+    padding:4px 5px 2px 5px;
+    font-weight:normal;
+  }
+
+.SubTabL23
+  {
+    padding:3px 5px 2px 5px;
+    font-weight:normal;
+  }
+
+.SubTabL20 { border-bottom: 1px solid; margin: 0 3px 0 3px; }
+.SubTabL21 { border-left: 2px solid; border-right: 2px solid; margin: 0 2px 0 2px; background-image:url(top_tab_bg_grndk.png); }
+.SubTabL22 { border-left: 1px solid; border-right: 1px solid; margin: 0 1px 0 1px; background-image:url(top_tab_bg_grndk.png); }
+.SubTabL23, .SubTabL23IE { border-left: 1px solid; border-right: 1px solid; border-bottom:1px solid; margin: 0 1px 0 1px; background-image:url(top_tab_bg_grndk.png); }
+
+.SubTabL20, .SubTabL21, .SubTabL22, .SubTabL23, .SubTabL23IE
+  {
+    border-color: #1fa0d5;
+    background-position:100%;
+  }
+
+/*** SubTabL3x : SubMenuTab is Inactive ***/
+
+.SubTabL33
+  {
+    padding:2px 5px 2px 5px;
+    font-weight:normal;
+  }
+
+.SubTabL30 { border-bottom: 1px solid; margin: 0 3px 0 3px; }
+.SubTabL31 { border-left: 2px solid; border-right: 2px solid; margin: 0 2px 0 2px; background-image:url(top_tab_bg_grey.png); }
+.SubTabL32 { border-left: 1px solid; border-right: 1px solid; margin: 0 1px 0 1px; background-image:url(top_tab_bg_grey.png); }
+.SubTabL33 { border-left: 1px solid; border-right: 1px solid; border-bottom:1px solid; margin: 0 1px 0 1px; background-image:url(top_tab_bg_grey.png); }
+
+.SubTabL30, .SubTabL31, .SubTabL32, .SubTabL33
+  {
+    border-color: #2f4955;
+    background-position:100%;
+  }
+
+.SubTabL10, .SubTabL11, .SubTabL12
+.SubTabL20, .SubTabL21, .SubTabL22
+.SubTabL30, .SubTabL31, .SubTabL32
+  {
+    font-size: 0;
+    height: 1px;
+  }
+
+/********** Sub Menu Style Definition **** END **********/
+
+/**************** Hyper Text Definition *****************/
+
+a.MenuTabLink:link    {text-decoration:none;font-family:Arial;color:#ffffff;font-size:12px}
+a.MenuTabLink:visited {text-decoration:none;font-family:Arial;color:#ffffff;font-size:12px}
+a.MenuTabLink:hover   {text-decoration:none;font-family:Arial;color:#ffffff;font-size:12px}
+a.MenuTabLink:active  {text-decoration:none;font-family:Arial;color:#ffffff;font-size:12px}
+
+/********************************************************/
+
+/*************** Shadow Text Definition *****************/
+
+.ShadowText/*, .MainTabL13, .MainTabL33*/
+  {
+    text-shadow:#dfdfdf 1px 1px 1px; /* text-shadow for Others */
+    dropShadow(Color=#dfdfdf,offX=1,offY=1,positive=true); /* dropShadow for IE */
+  }
+
+/********************************************************/

@@ -1,0 +1,129 @@
+<form action="./engine.pl" method=POST><input type=hidden name="mode" value="--mode--"><input type=hidden name="submode" value="--submode--"><input type=hidden name="action" value="save">
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">Contacts & Location</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="138">First Name:</td>
+								<td>
+									<input name="name1" size="32" maxlength="90" value="--name1--" type="text"> *
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Last Name:</td>
+								<td>
+									<input name="name2" size="32" maxlength="90" value="--name2--" type="text"> *
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Street Address:</td>
+								<td>
+									<input name="address1" size="32" maxlength="190" value="--address1--" type="text"> *
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Street Address (cont):</td>
+								<td>
+									<input name="address2" size="32" maxlength="190" value="--address2--" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">City:</td>
+								<td>
+									<input name="city" size="32" maxlength="90" value="--city--" type="text"> *
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">State or Province:</td>
+								<td class="stdbold" nowrap="nowrap"><select name="province" size="1">
+									--province--
+								</select></td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Country:</td>
+								<td class="stdbold" nowrap="nowrap"><select name="country" size="1">
+									--country--
+								</select> *</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Zip or Postal Code:</td>
+								<td>
+									<input name="postal" size="7" maxlength="20" value="--postal--" type="text"> *
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Phone number, Main:</td>
+								<td>
+									<input name="phone1" size="16" maxlength="20" value="--phone1--" type="text"> *
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Phone number, Mobile:</td>
+								<td>
+									<input name="phone2" size="16" maxlength="20" value="--phone2--" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Phone number, Additional:</td>
+								<td>
+									<input name="phone3" size="16" maxlength="20" value="--phone3--" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">E-Mail Address:</td>
+								<td>
+									<input name="email" size="32" maxlength="190" value="--email--" type="text"> *
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="138">Time Zone:</td>
+								<td class="stdbold" nowrap="nowrap"><select id="timezone" name="timezone">
+									--timezone--
+								</select></td>
+							</tr>--message--
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						Administrator details and contacts
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				<input name="save" value="Save Settings" class="stdbutton" type="SUBMIT">
+				<input name="cancel" value="Cancel Changes" class="stdbutton" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--';" type="button"> &nbsp;  &nbsp;
+			</td>
+			<td class="Footer3"></td>
+		</tr>
+	</tbody></table>
+</form>

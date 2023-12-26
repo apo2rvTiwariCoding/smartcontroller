@@ -1,0 +1,34 @@
+registrations		devices			zigbee_ase (type=0)	zigbee_ha (type=80)
+
+id (unique)					id (unique)		id (unique)
+updated
+event_type
+device_type	--->	device_type
+zigbee_short	--------------------------->	addr16		--->	addr16
+zigbee_addr64	--->	xbee_addr64	--->	addr64		--->	addr64
+zigbee_mode
+panid
+channel
+rssi
+device_id	<---	id		--->	device_id	--->	device_id
+device_desc
+zone_id		--->	zone_id
+			hardware_type (obsolete)
+			description (optional)
+zone_desc
+source
+zigbee_hw	--------------------------->	zigbee_hw
+zigbee_fw	--------------------------->	zigbee_sw
+device_hw
+device_fw	--------------------------->	device_sw
+status
+asemp_id	--->	asemp		--->	profile_id
+serial		--->	serial
+						joined			joined
+						updated			updated
+						device_type
+						device_status		device_status
+						device_state
+									cluster_id
+									endpoint_id
+									profile_id

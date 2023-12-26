@@ -1,0 +1,144 @@
+#
+# Common rules
+#
+
+
+MODULE_TYPE := $(strip $(TYPE))
+MODULE_NAME := $(strip $(NAME))
+
+TARGET := $(BUILD_DIR)/$(MODULE_NAME)
+ifeq ($(MODULE_TYPE),lib)
+TARGET := $(TARGET).a
+else ifeq ($(MODULE_TYPE),shared_lib)
+CFLAGS += -fpic
+CXXFLAGS += -fpic
+LDFLAGS += -shared
+TARGET := $(TARGET).so
+endif
+
+OBJS := $(addprefix $(BUILD_DIR)/, $(addsuffix .o, $(basename $(SRCS))))
+OBJS += $(addprefix $(BUILD_DIR)/, $(addsuffix .o, $(basename $(SRCS_GEN))))
+SRCS_DEPS := $(patsubst %.o, %.dep, $(OBJS))
+
+INCS_DIRS += -I$(ROOT_DIR)
+
+
+all: $(DEPS_DIRS) $(DEPS_MAKE_TARGETS) $(TARGET)
+
+###
+# Link rules
+
+ifeq ($(MODULE_TYPE),exe)
+
+$(TARGET): $(SRCS_GEN) $(OBJS) $(DEPS)
+	-@echo "LD $@"
+	@$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(DEPS) $(LIBS)
+
+else ifeq ($(MODULE_TYPE),lib)
+
+$(TARGET): $(OBJS) $(DEPS)
+	-@echo "AR $@"
+	@$(AR) rcs $@ $(OBJS) $(DEPS)
+
+else ifeq ($(MODULE_TYPE),shared_lib)
+
+$(TARGET): $(OBJS) $(DEPS)
+	-@echo "LD $@"
+	@$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(DEPS) $(LIBS)
+
+endif
+
+###
+# Generating object directories rules
+
+ifeq ($(HOST),windows)
+BIN_DIRS := $(BUILD_DIR) $(addprefix $(BUILD_DIR)\,$(subst /,\,$(SRCS_DIRS)))
+else ifeq ($(HOST),linux)
+BIN_DIRS := $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(SRCS_DIRS))
+else
+$(error Not supported)
+endif
+
+$(BIN_DIRS):
+	-@echo "MKDIR $@"  
+	@mkdir $@
+
+###
+# Compile rules
+
+$(BUILD_DIR)/%.o: %.cpp | $(BIN_DIRS)
+	-@echo "CXX $<"
+	@$(CXX) $(CXXFLAGS) $(INCS_DIRS) $(DEFS) -c $< -o $@
+
+$(BUILD_DIR)/%.o: %.c | $(BIN_DIRS)
+	-@echo "CC $<"
+	@$(CC) $(CFLAGS) $(INCS_DIRS) $(DEFS) -c $< -o $@
+
+###
+# Dependencies rules
+
+$(BUILD_DIR)/%.dep: %.cpp | $(BIN_DIRS)
+	-@echo "DEP $<"
+	@$(CXX) -M -MT $(patsubst %.dep, %.o, $@) \
+		$(CXXFLAGS) $(INCS_DIRS) $(DEFS) $< > $@
+
+$(BUILD_DIR)/%.dep: %.c | $(BIN_DIRS)
+	-@echo "DEP $<"
+	@$(CC) -M -MT $(patsubst %.dep, %.o, $@) \
+		$(CFLAGS) $(INCS_DIRS) $(DEFS) $< > $@
+
+ifneq ($(MAKECMDGOALS),clean)
+-include $(SRCS_DEPS)
+endif
+
+###
+# Other rules
+
+DEPS_CMD := all
+.PHONY: deps $(DEPS_DIRS)
+deps: $(DEPS_DIRS)
+$(DEPS_DIRS):
+	$(MAKE) -C $@ $(DEPS_CMD)
+
+.PHONY: clean-gens
+clean-gens:
+ifneq ($(strip $(SRCS_GEN)),)
+ifeq ($(HOST),linux)
+	-@rm -f $(SRCS_GEN)
+else ifeq ($(HOST),windows)
+	-@del $(subst /,\,$(SRCS_GEN))
+else
+$(error Not supported)
+endif
+endif
+
+.PHONY: clean
+clean: clean-gens
+ifeq ($(HOST),linux)
+	-@rm -f $(OBJS) $(SRCS_DEPS)
+	-@rm -f $(TARGET)
+else ifeq ($(HOST),windows)
+	-@del $(subst /,\,$(OBJS)) $(subst /,\,$(SRCS_DEPS))
+	-@del $(subst /,\,$(TARGET))
+else
+$(error Not supported)
+endif
+
+.PHONY: clean-deps
+clean-deps:
+	$(MAKE) deps DEPS_CMD:=clean
+
+.PHONY: clean-all
+clean-all: clean clean-deps
+
+.PHONY: help
+help:
+	@echo all        Builds this module and its dependecies.
+	@echo deps       Builds the module dependecies.
+	@echo clean      Deletes the module object files.
+	@echo clean-deps Deletes the module dependecies object files.
+	@echo clean-all  Cleans module and its dependecies object files.
+
+.PHONY: test
+test:
+	@echo $(TARGET)

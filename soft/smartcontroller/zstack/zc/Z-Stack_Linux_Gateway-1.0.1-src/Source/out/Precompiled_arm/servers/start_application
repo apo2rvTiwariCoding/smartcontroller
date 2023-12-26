@@ -1,0 +1,14 @@
+#! /bin/sh
+#
+# start_application
+#
+echo "Starting application"
+rm server_details.txt
+
+echo "Storing server details"
+
+echo "127.0.0.1\n2540\n127.0.0.1\n2541\n127.0.0.1\n2525\n" >> server_details.txt
+
+#../app/main.bin
+./zigbee.bin
+echo Done

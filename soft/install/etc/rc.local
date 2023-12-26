@@ -1,0 +1,48 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# Print the IP address
+_IP=$(hostname -I) || true
+if [ "$_IP" ]; then
+  printf "My IP address is %s\n" "$_IP"
+fi
+
+# force filesystem check
+
+/usr/bin/touch /forcefsck
+sleep 3
+
+# check mysql database
+
+/usr/bin/mysqlcheck -p -u smart -p0hASE smart2014 >> /var/log/mysqlchk.log
+
+# configure second WAN interface
+
+/sbin/iw phy phy0 interface add wlan1 type station
+/sbin/ip link set dev wlan1 address 64:70:02:2a:44:2a
+/sbin/ifdown wlan1
+/sbin/ifup wlan1 2> /tmp/wlan1 &
+
+# start muxdemux
+
+/home/pi/smartcontroller/mux_demux/test/obj/test root 0hASE smart2014 > /dev/null &
+
+# start HVAC
+
+/var/www/smart/hvacserver.pl > /dev/null &
+
+# start smart thermostat listener
+
+/var/www/smart/nest2.pl > /dev/null &
+
+exit 0

@@ -1,0 +1,135 @@
+<form action="./engine.pl" method=POST name="advancedForm"><input type=hidden name="mode" value="--mode--"><input type=hidden name="submode" value="--submode--"><input type=hidden name="action" value="save">
+	<table class="dataTable">
+	<tbody><tr>
+		<td>
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">System Restart</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="330" valign=top>Restart RetroSAVE applications and components<br>Number of restarts: --restnum0-- , last: --restlast0--</td>
+								<td align="left" nowrap="nowrap"><input name="CheckUpdateREST" value="Proceed" onclick="AreYouSure('restart', 'Are you sure to reload RetroSAVE?');" type="button">
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" colspan=2><div class=in10></div></td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="330" valign=top>Soft reset Smart Controller system gracefully<br>Number of restarts: --restnum1-- , last: --restlast1--</td>
+								<td align="left" nowrap="nowrap"><input name="CheckUpdateREB" value="Proceed" onclick="AreYouSure('reboot', 'Are you sure to reset Smart Controller?');" type="button">
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" colspan=2><div class=in10></div></td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="330" valign=top>Shutdown Smart Controller system gracefully<br>Number of shutdowns: --restnum2-- , last: --restlast2--</td>
+								<td align="left" nowrap="nowrap"><input name="CheckUpdateSHT" value="Proceed" onclick="AreYouSure('shutdown', 'Are you sure to shutdown Smart Controller?\nYou must have physical access to switch it back on');" type="button">
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" colspan=2><div class=in10></div></td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="330" valign=top>Restart Smart Controller IP WAN devices<br>Used to reload wireless network settings</td>
+								<td align="left" nowrap="nowrap"><input name="CheckUpdateWR" value="Proceed" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--&action=netresetw';" type="button">
+								</td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" colspan=2><div class=in10></div></td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="330" valign=top>Restart Smart Controller IP LAN devices<br>Used to reload wired network controllers</td>
+								<td align="left" nowrap="nowrap"><input name="CheckUpdateWA" value="Proceed" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--&action=netreseta';" type="button">
+								</td>
+							</tr>
+							--updmessage--
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+
+			<table class="nav">
+				<tbody><tr>
+					<td class="bwhead">Factory Defaults</td>
+					<td class="bwhead1">&nbsp;</td>
+					<td class="nav1">&nbsp;</td>
+				</tr>
+				<tr height="3px">
+					<td class="Item1"></td>
+					<td class="Item2"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="Item1"> </td>
+					<td class="Item2"> </td>
+					<td class="Item3">
+						<table class="std"><tbody>
+							<tr>
+								<td nowrap="nowrap" width="330">Revert the system and network settings to Factory default:</td>
+								<td align=left><input id="factory1" name="factory1" type="checkbox"--f1chk--></td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="330">Clears up all the database tables and structures:</td>
+								<td align=left><input id="factory2" name="factory2" type="checkbox"--f2chk--></td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="330">Cleans up all the log files:</td>
+								<td align=left><input id="factory3" name="factory3" type="checkbox"--f3chk--></td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" width="330">Cleans up all temporary files:</td>
+								<td align=left><input id="factory4" name="factory4" type="checkbox"--f4chk--></td>
+							</tr>
+							<tr>
+								<td nowrap="nowrap" colspan=2><div class=in10></div></td>
+							</tr> 
+							<tr>
+								<td nowrap="nowrap" width="330" valign=top>Select factory defaults restore options from above and proceed.<br><b><font color=red>Warning!</font></b> Cleaning files, database and settings are irreversible!</td>
+								<td align="left" nowrap="nowrap"><input name="Factory" value="Proceed" onclick="FactorySure('Are you sure to proceed with selected actions?');" type="button">
+								</td>
+							</tr>
+							--upd2message--
+						</tbody></table>
+						<br>
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+
+		<td class="help">
+			<table><tbody>
+				<tr>
+					<td class="righthelptab">
+						System advanced maintenance tools
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<table class="bottom"><tbody>
+		<tr>
+			<td class="Footer1">&nbsp;</td>
+			<td class="Footer2">
+				&nbsp;
+				<input name="cancel" value="Refresh data" class="stdbutton" onclick="window.location.href='./engine.pl?mode=--mode--&submode=--submode--';" type="button"> &nbsp;  &nbsp;
+			</td>
+			<td class="Footer3">--usermode--</td>
+		</tr>
+	</tbody></table>
+</form>

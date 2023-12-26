@@ -1,0 +1,25 @@
+auto lo
+
+iface lo inet loopback
+
+iface eth0 inet static
+    address 192.168.2.17
+    netmask 255.255.255.0
+    gateway 192.168.2.1
+    up iptables-restore < /etc/iptables.ipv4.nat
+
+iface wlan0 inet manual
+iface wlan0 inet static
+    address 192.168.42.1
+    netmask 255.255.255.0
+
+iface wlan1 inet manual
+iface wlan1 inet dhcp
+    pre-up wpa_supplicant -i wlan1 -c /etc/wpa_supplicant/wpa_supplicant.conf -B
+    post-down killall -q wpa_supplicant
+    up iptables -A FORWARD -i wlan1 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+    up iptables -A FORWARD -i wlan0 -o wlan1 -j ACCEPT
+    up iptables --table nat -A POSTROUTING -o wlan1 --jump MASQUERADE
+    down iptables -D FORWARD -i wlan1 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+    down iptables -D FORWARD -i wlan0 -o wlan1 -j ACCEPT
+    down iptables --table nat -D POSTROUTING -o wlan1 --jump MASQUERADE
