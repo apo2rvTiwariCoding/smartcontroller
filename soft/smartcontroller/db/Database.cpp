@@ -2,6 +2,9 @@
 #include "Database.h"
 #include "util/log/log.h"
 
+
+// test comment
+
 CDatabase* CDatabase::mDBInstance = NULL;
 CDatabase::CDatabase(std::string server,std::string user,std::string password,std::string database)
 {
