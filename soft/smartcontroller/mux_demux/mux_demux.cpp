@@ -78,9 +78,11 @@ int MuxDemuxInit(const ::std::string& user,
     // writing message to standard error stream
     fprintf(stderr, "Getting DB instance\n");
 
-    
+    // pdb contains CDatabase object address, which contains initialize and connected sql database
     CDatabase* const pdb =
             CDatabase::getInstance(s_sql_server_ip, user, password, database);
+
+    // pdb == NULL , in case memory allocation during object construction fails.
     if(pdb ==NULL)
     {
         fprintf(stderr,"Database instance is not created\n");
@@ -89,6 +91,8 @@ int MuxDemuxInit(const ::std::string& user,
 
 
     fprintf(stderr, "Initializing HAL\n");
+
+    
     if (Hal::Init())
     {
         hal_init_err = 1;

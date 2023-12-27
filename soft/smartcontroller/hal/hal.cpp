@@ -15,323 +15,323 @@
 namespace Hal
 {
 
-/// It holds exclusive ownership of the driver and all devices.
-static TDriver::TUPtr s_driver;
+    /// It holds exclusive ownership of the driver and all devices.
+    static TDriver::TUPtr s_driver;
 
 
-//-----------------------------------------------------------------------------
-int Init() noexcept
-{
-    TErrorCode error = EC_NO_ERROR;
-
-    try
+    //-----------------------------------------------------------------------------
+    int Init() noexcept
     {
-        s_driver.reset();
+        TErrorCode error = EC_NO_ERROR;
 
-        TDriver::TUPtr driver(new TDriver());
-        driver->Configure();
+        try
+        {
+            s_driver.reset();
 
-        s_driver = ::std::move(driver);
-    }
-    catch(const TException& e)
-    {
-        LOG_ERROR(g_log_section, e.ToString());
-        error = e.m_error;
-    }
-    catch(...)
-    {
-        LOG_ERROR("HAL", "unknown error");
-        error = EC_UNKNOWN;
-    }
+            TDriver::TUPtr driver(new TDriver());
+            driver->Configure();
 
-    return error;
-}
+            s_driver = ::std::move(driver);
+        }
+        catch(const TException& e)
+        {
+            LOG_ERROR(g_log_section, e.ToString());
+            error = e.m_error;
+        }
+        catch(...)
+        {
+            LOG_ERROR("HAL", "unknown error");
+            error = EC_UNKNOWN;
+        }
 
-//-----------------------------------------------------------------------------
-bool IsInitialized() noexcept
-{
-    return static_cast< bool >(s_driver);
-}
-
-//-----------------------------------------------------------------------------
-template < typename P, typename ...Args >
-static int WrapCall(const P& p, Args&& ...args) noexcept
-{
-    TErrorCode error = EC_NO_ERROR;
-
-    try
-    {
-        assert(static_cast< bool >(s_driver));
-        ((*s_driver).*p)(args...);
-    }
-    catch(const TException& e)
-    {
-        LOG_ERROR(g_log_section, e.ToString());
-        error = e.m_error;
-    }
-    catch(...)
-    {
-        LOG_ERROR(g_log_section, "unknown error");
-        error = EC_UNKNOWN;
+        return error;
     }
 
-    return error;
-}
-
-//-----------------------------------------------------------------------------
-template< typename R, typename P, typename ...Args >
-static int WrapCallR(R& ret, const P& p, Args&& ...args) noexcept
-{
-    TErrorCode error = EC_NO_ERROR;
-
-    try
+    //-----------------------------------------------------------------------------
+    bool IsInitialized() noexcept
     {
-        assert(static_cast< bool >(s_driver));
-        ret = ((*s_driver).*p)(args...);
-    }
-    catch(const TException& e)
-    {
-        LOG_ERROR(g_log_section, e.ToString());
-        error = e.m_error;
-    }
-    catch(...)
-    {
-        LOG_ERROR(g_log_section, "unknown error");
-        error = EC_UNKNOWN;
+        return static_cast< bool >(s_driver);
     }
 
-    return error;
-}
+    //-----------------------------------------------------------------------------
+    template < typename P, typename ...Args >
+    static int WrapCall(const P& p, Args&& ...args) noexcept
+    {
+        TErrorCode error = EC_NO_ERROR;
 
-//-----------------------------------------------------------------------------
-int RelaySetPosition(TRelayId id, bool position) noexcept
-{
-    return WrapCall(&TDriver::RelaySetPosition, id, position);
-}
+        try
+        {
+            assert(static_cast< bool >(s_driver));
+            ((*s_driver).*p)(args...);
+        }
+        catch(const TException& e)
+        {
+            LOG_ERROR(g_log_section, e.ToString());
+            error = e.m_error;
+        }
+        catch(...)
+        {
+            LOG_ERROR(g_log_section, "unknown error");
+            error = EC_UNKNOWN;
+        }
 
-//-----------------------------------------------------------------------------
-int RelaysReset() noexcept
-{
-    return WrapCall(&TDriver::RelaysReset);
-}
+        return error;
+    }
 
-//-----------------------------------------------------------------------------
-int LedSetState(TLedId id, bool on) noexcept
-{
-    return WrapCall(&TDriver::LedSetState, id, on);
-}
+    //-----------------------------------------------------------------------------
+    template< typename R, typename P, typename ...Args >
+    static int WrapCallR(R& ret, const P& p, Args&& ...args) noexcept
+    {
+        TErrorCode error = EC_NO_ERROR;
 
-//-----------------------------------------------------------------------------
-int HumidityGetValue(float& value) noexcept
-{
-    return WrapCallR(value, &TDriver::HumidityGetValue);
-}
+        try
+        {
+            assert(static_cast< bool >(s_driver));
+            ret = ((*s_driver).*p)(args...);
+        }
+        catch(const TException& e)
+        {
+            LOG_ERROR(g_log_section, e.ToString());
+            error = e.m_error;
+        }
+        catch(...)
+        {
+            LOG_ERROR(g_log_section, "unknown error");
+            error = EC_UNKNOWN;
+        }
 
-//-----------------------------------------------------------------------------
-int HumidityPeriodicUpdateStart(int interval,
-                                const THumidityCallback& callback) noexcept
-{
-    return WrapCall(&TDriver::HumidityPeriodicUpdateStart, interval, callback);
-}
+        return error;
+    }
 
-//-----------------------------------------------------------------------------
-int HumidityPeriodicUpdateStop() noexcept
-{
-    s_driver->HumidityPeriodicUpdateStop();
-    return 0;
-}
+    //-----------------------------------------------------------------------------
+    int RelaySetPosition(TRelayId id, bool position) noexcept
+    {
+        return WrapCall(&TDriver::RelaySetPosition, id, position);
+    }
 
-//-----------------------------------------------------------------------------
-int TemperatureGetValue(float& value) noexcept
-{
-    return WrapCallR(value, &TDriver::TemperatureGetValue);
-}
+    //-----------------------------------------------------------------------------
+    int RelaysReset() noexcept
+    {
+        return WrapCall(&TDriver::RelaysReset);
+    }
 
-//-----------------------------------------------------------------------------
-int TemperaturePeriodicUpdateStart(int interval,
-                                   const TTemperatureCallback& callback) noexcept
-{
-    return WrapCall(&TDriver::TemperaturePeriodicUpdateStart, interval,
-        callback);
-}
+    //-----------------------------------------------------------------------------
+    int LedSetState(TLedId id, bool on) noexcept
+    {
+        return WrapCall(&TDriver::LedSetState, id, on);
+    }
 
-//-----------------------------------------------------------------------------
-int TemperaturePeriodicUpdateStop() noexcept
-{
-    s_driver->TemperaturePeriodicUpdateStop();
-    return 0;
-}
+    //-----------------------------------------------------------------------------
+    int HumidityGetValue(float& value) noexcept
+    {
+        return WrapCallR(value, &TDriver::HumidityGetValue);
+    }
 
-//-----------------------------------------------------------------------------
-int AdcGetRawValue(TAdcChannelId channel_id, unsigned& value) noexcept
-{
-    return WrapCallR(value, &TDriver::AdcGetRawValue, channel_id);
-}
+    //-----------------------------------------------------------------------------
+    int HumidityPeriodicUpdateStart(int interval,
+                                    const THumidityCallback& callback) noexcept
+    {
+        return WrapCall(&TDriver::HumidityPeriodicUpdateStart, interval, callback);
+    }
 
-//-----------------------------------------------------------------------------
-int AdcSetLowLimit(TAdcChannelId channel_id, unsigned threshold) noexcept
-{
-    return WrapCall(&TDriver::AdcSetLowLimit, channel_id, threshold);
-}
+    //-----------------------------------------------------------------------------
+    int HumidityPeriodicUpdateStop() noexcept
+    {
+        s_driver->HumidityPeriodicUpdateStop();
+        return 0;
+    }
 
-//-----------------------------------------------------------------------------
-int AdcSetHighLimit(TAdcChannelId channel_id, unsigned threshold) noexcept
-{
-    return WrapCall(&TDriver::AdcSetHighLimit, channel_id, threshold);
-}
+    //-----------------------------------------------------------------------------
+    int TemperatureGetValue(float& value) noexcept
+    {
+        return WrapCallR(value, &TDriver::TemperatureGetValue);
+    }
 
-//-----------------------------------------------------------------------------
-int AdcGetAlerts(TAdcChannelId channel_id, bool& low, bool& high) noexcept
-{
-    return WrapCall(&TDriver::AdcGetAlerts, channel_id, low, high);
-}
+    //-----------------------------------------------------------------------------
+    int TemperaturePeriodicUpdateStart(int interval,
+                                    const TTemperatureCallback& callback) noexcept
+    {
+        return WrapCall(&TDriver::TemperaturePeriodicUpdateStart, interval,
+            callback);
+    }
 
-//-----------------------------------------------------------------------------
-int AdcPeriodicUpdateStart(TAdcChannelId channel_id, int interval,
-                           const TAdcCallback& callback) noexcept
-{
-    return WrapCall(&TDriver::AdcPeriodicUpdateStart, channel_id,
-        interval, callback);
-}
+    //-----------------------------------------------------------------------------
+    int TemperaturePeriodicUpdateStop() noexcept
+    {
+        s_driver->TemperaturePeriodicUpdateStop();
+        return 0;
+    }
 
-//-----------------------------------------------------------------------------
-int AdcPeriodicUpdateStop(TAdcChannelId channel_id) noexcept
-{
-    s_driver->AdcPeriodicUpdateStop(channel_id);
-    return 0;
-}
+    //-----------------------------------------------------------------------------
+    int AdcGetRawValue(TAdcChannelId channel_id, unsigned& value) noexcept
+    {
+        return WrapCallR(value, &TDriver::AdcGetRawValue, channel_id);
+    }
 
-//-----------------------------------------------------------------------------
-int CoGetValue(unsigned& value) noexcept
-{
-    return WrapCallR(value, &TDriver::CoGetValue);
-}
+    //-----------------------------------------------------------------------------
+    int AdcSetLowLimit(TAdcChannelId channel_id, unsigned threshold) noexcept
+    {
+        return WrapCall(&TDriver::AdcSetLowLimit, channel_id, threshold);
+    }
 
-//-----------------------------------------------------------------------------
-int CoGetState(bool& state) noexcept
-{
-    return WrapCallR(state, &TDriver::CoGetState);
-}
+    //-----------------------------------------------------------------------------
+    int AdcSetHighLimit(TAdcChannelId channel_id, unsigned threshold) noexcept
+    {
+        return WrapCall(&TDriver::AdcSetHighLimit, channel_id, threshold);
+    }
 
-//-----------------------------------------------------------------------------
-int CoSetThreshold(unsigned threshold) noexcept
-{
-    return WrapCall(&TDriver::CoSetThreshold, threshold);
-}
+    //-----------------------------------------------------------------------------
+    int AdcGetAlerts(TAdcChannelId channel_id, bool& low, bool& high) noexcept
+    {
+        return WrapCall(&TDriver::AdcGetAlerts, channel_id, low, high);
+    }
 
-//-----------------------------------------------------------------------------
-int CoPeriodicUpdateStart(int interval, const TCoCallback& callback) noexcept
-{
-    return WrapCall(&TDriver::CoPeriodicUpdateStart, interval, callback);
-}
+    //-----------------------------------------------------------------------------
+    int AdcPeriodicUpdateStart(TAdcChannelId channel_id, int interval,
+                            const TAdcCallback& callback) noexcept
+    {
+        return WrapCall(&TDriver::AdcPeriodicUpdateStart, channel_id,
+            interval, callback);
+    }
 
-//-----------------------------------------------------------------------------
-int CoPeriodicUpdateStop() noexcept
-{
-    return WrapCall(&TDriver::CoPeriodicUpdateStop);
-}
+    //-----------------------------------------------------------------------------
+    int AdcPeriodicUpdateStop(TAdcChannelId channel_id) noexcept
+    {
+        s_driver->AdcPeriodicUpdateStop(channel_id);
+        return 0;
+    }
 
-//-----------------------------------------------------------------------------
-int Co2GetValue(float& value) noexcept
-{
-    return WrapCallR(value, &TDriver::Co2GetValue);
-}
+    //-----------------------------------------------------------------------------
+    int CoGetValue(unsigned& value) noexcept
+    {
+        return WrapCallR(value, &TDriver::CoGetValue);
+    }
 
-//-----------------------------------------------------------------------------
-int Co2PeriodicUpdateStart(int interval, const TCo2Callback& callback) noexcept
-{
-    return WrapCall(&TDriver::Co2PeriodicUpdateStart, interval, callback);
-}
+    //-----------------------------------------------------------------------------
+    int CoGetState(bool& state) noexcept
+    {
+        return WrapCallR(state, &TDriver::CoGetState);
+    }
 
-//-----------------------------------------------------------------------------
-int Co2PeriodicUpdateStop() noexcept
-{
-    return WrapCall(&TDriver::Co2PeriodicUpdateStop);
-}
+    //-----------------------------------------------------------------------------
+    int CoSetThreshold(unsigned threshold) noexcept
+    {
+        return WrapCall(&TDriver::CoSetThreshold, threshold);
+    }
 
-//-----------------------------------------------------------------------------
-int RtcSet(const TRtcTime& time) noexcept
-{
-    return WrapCall(&TDriver::RtcSet, time);
-}
+    //-----------------------------------------------------------------------------
+    int CoPeriodicUpdateStart(int interval, const TCoCallback& callback) noexcept
+    {
+        return WrapCall(&TDriver::CoPeriodicUpdateStart, interval, callback);
+    }
 
-//-----------------------------------------------------------------------------
-int RtcGet(TRtcTime& time, bool& running) noexcept
-{
-    return WrapCallR(running, &TDriver::RtcGet, time);
-}
+    //-----------------------------------------------------------------------------
+    int CoPeriodicUpdateStop() noexcept
+    {
+        return WrapCall(&TDriver::CoPeriodicUpdateStop);
+    }
 
-//-----------------------------------------------------------------------------
-int InterruptsGetStatuses(unsigned& mask) noexcept
-{
-    return WrapCallR(mask, &TDriver::InterruptsGetStatuses);
-}
+    //-----------------------------------------------------------------------------
+    int Co2GetValue(float& value) noexcept
+    {
+        return WrapCallR(value, &TDriver::Co2GetValue);
+    }
 
-//-----------------------------------------------------------------------------
-int InterruptsRegisterHandler(const TInterruptsHandler& handler) noexcept
-{
-    return WrapCall(&TDriver::InterruptsRegisterHandler, handler);
-}
+    //-----------------------------------------------------------------------------
+    int Co2PeriodicUpdateStart(int interval, const TCo2Callback& callback) noexcept
+    {
+        return WrapCall(&TDriver::Co2PeriodicUpdateStart, interval, callback);
+    }
 
-//-----------------------------------------------------------------------------
-int W1Enumerate(TW1DevicesInfo& devices_info) noexcept
-{
-    return WrapCall(&TDriver::W1Enumerate, devices_info);
-}
+    //-----------------------------------------------------------------------------
+    int Co2PeriodicUpdateStop() noexcept
+    {
+        return WrapCall(&TDriver::Co2PeriodicUpdateStop);
+    }
 
-//-----------------------------------------------------------------------------
-int W1GetValue(const TW1DeviceAddress& address, TW1DeviceType& type,
-        float& value) noexcept
-{
-    typedef float (TDriver::*TMethod)(const TW1DeviceAddress&, TW1DeviceType&);
-    return WrapCallR(value, static_cast< TMethod >(&TDriver::W1GetValue),
-            address, type);
-}
+    //-----------------------------------------------------------------------------
+    int RtcSet(const TRtcTime& time) noexcept
+    {
+        return WrapCall(&TDriver::RtcSet, time);
+    }
 
-//-----------------------------------------------------------------------------
-int W1PeriodicUpdateStart(const TW1DeviceAddress& address, int interval,
-                          const TW1Callback& callback) noexcept
-{
-    return WrapCall(&TDriver::W1PeriodicUpdateStart,
-        address, interval, callback);
-}
+    //-----------------------------------------------------------------------------
+    int RtcGet(TRtcTime& time, bool& running) noexcept
+    {
+        return WrapCallR(running, &TDriver::RtcGet, time);
+    }
 
-//-----------------------------------------------------------------------------
-int W1PeriodicUpdateStop(const TW1DeviceAddress& address) noexcept
-{
-    return WrapCall(&TDriver::W1PeriodicUpdateStop, address);
-}
+    //-----------------------------------------------------------------------------
+    int InterruptsGetStatuses(unsigned& mask) noexcept
+    {
+        return WrapCallR(mask, &TDriver::InterruptsGetStatuses);
+    }
 
-//-----------------------------------------------------------------------------
-int I2cDeviceEnable(TI2cDeviceType type) noexcept
-{
-    return WrapCall(&TDriver::I2cDeviceEnable, type);
-}
+    //-----------------------------------------------------------------------------
+    int InterruptsRegisterHandler(const TInterruptsHandler& handler) noexcept
+    {
+        return WrapCall(&TDriver::InterruptsRegisterHandler, handler);
+    }
 
-//-----------------------------------------------------------------------------
-int I2cDeviceDisable(TI2cDeviceType type) noexcept
-{
-    return WrapCall(&TDriver::I2cDeviceDisable, type);
-}
+    //-----------------------------------------------------------------------------
+    int W1Enumerate(TW1DevicesInfo& devices_info) noexcept
+    {
+        return WrapCall(&TDriver::W1Enumerate, devices_info);
+    }
 
-//-----------------------------------------------------------------------------
-int I2cGetValue(TI2cDeviceType type, float& value) noexcept
-{
-    typedef float (TDriver::*TMethod)(TI2cDeviceType);
-    return WrapCallR(value, static_cast< TMethod >(&TDriver::I2cGetValue), type);
-}
+    //-----------------------------------------------------------------------------
+    int W1GetValue(const TW1DeviceAddress& address, TW1DeviceType& type,
+            float& value) noexcept
+    {
+        typedef float (TDriver::*TMethod)(const TW1DeviceAddress&, TW1DeviceType&);
+        return WrapCallR(value, static_cast< TMethod >(&TDriver::W1GetValue),
+                address, type);
+    }
 
-//-----------------------------------------------------------------------------
-int I2cPeriodicUpdateStart(TI2cDeviceType type, int interval,
-                           const TI2cCallback& callback) noexcept
-{
-    return WrapCall(&TDriver::I2cPeriodicUpdateStart, type, interval, callback);
-}
+    //-----------------------------------------------------------------------------
+    int W1PeriodicUpdateStart(const TW1DeviceAddress& address, int interval,
+                            const TW1Callback& callback) noexcept
+    {
+        return WrapCall(&TDriver::W1PeriodicUpdateStart,
+            address, interval, callback);
+    }
 
-//-----------------------------------------------------------------------------
-int I2cPeriodicUpdateStop(TI2cDeviceType type) noexcept
-{
-    return WrapCall(&TDriver::I2cPeriodicUpdateStop, type);
-}
+    //-----------------------------------------------------------------------------
+    int W1PeriodicUpdateStop(const TW1DeviceAddress& address) noexcept
+    {
+        return WrapCall(&TDriver::W1PeriodicUpdateStop, address);
+    }
+
+    //-----------------------------------------------------------------------------
+    int I2cDeviceEnable(TI2cDeviceType type) noexcept
+    {
+        return WrapCall(&TDriver::I2cDeviceEnable, type);
+    }
+
+    //-----------------------------------------------------------------------------
+    int I2cDeviceDisable(TI2cDeviceType type) noexcept
+    {
+        return WrapCall(&TDriver::I2cDeviceDisable, type);
+    }
+
+    //-----------------------------------------------------------------------------
+    int I2cGetValue(TI2cDeviceType type, float& value) noexcept
+    {
+        typedef float (TDriver::*TMethod)(TI2cDeviceType);
+        return WrapCallR(value, static_cast< TMethod >(&TDriver::I2cGetValue), type);
+    }
+
+    //-----------------------------------------------------------------------------
+    int I2cPeriodicUpdateStart(TI2cDeviceType type, int interval,
+                            const TI2cCallback& callback) noexcept
+    {
+        return WrapCall(&TDriver::I2cPeriodicUpdateStart, type, interval, callback);
+    }
+
+    //-----------------------------------------------------------------------------
+    int I2cPeriodicUpdateStop(TI2cDeviceType type) noexcept
+    {
+        return WrapCall(&TDriver::I2cPeriodicUpdateStop, type);
+    }
 
 } // namespace Hal

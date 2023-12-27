@@ -264,5 +264,3 @@ In this example:
 Using `std::shared_ptr` ensures automatic memory deallocation when the last `shared_ptr` pointing to the object goes out of scope or is reset. This reduces the need for explicit memory management and helps prevent memory leaks.
 
 Remember that the choice between `std::shared_ptr` and `std::unique_ptr` depends on the ownership semantics of your design. If multiple parts of your code need shared ownership of the `CDatabase` instance, use `std::shared_ptr`. If ownership is unique to a specific part of the code, consider using `std::unique_ptr`.
-
-
