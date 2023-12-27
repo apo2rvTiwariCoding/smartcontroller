@@ -40,6 +40,7 @@ class CDatabase
 		~CDatabase();
 		int connect();
 		
+		// to check if connected to database
 		bool connected()
 		{
 			return mConnected;

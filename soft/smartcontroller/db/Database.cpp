@@ -3,9 +3,24 @@
 #include "util/log/log.h"
 
 
-// test comment
-
+// global pointer to hold CDatabase class object instance.
 CDatabase* CDatabase::mDBInstance = NULL;
+
+/**
+ * @brief Construct a new CDatabase::CDatabase object
+// parameterized constructor to initialize 
+// variables : mServer, mUser, mPassword, mDatabase
+// mConnection from mysql_init()
+// mConnected
+// mutexes : mutex, mutex_exe with PTHREAD_MUTEX_INITIALIZER
+// mutexes are used to initialize with macro PTHREAD_MUTEX_INITIALIZER (actual value : -1)
+ * 
+//  also check CDatabase::connect() and if return 0 then log error
+ * @param server 
+ * @param user 
+ * @param password 
+ * @param database 
+ */
 CDatabase::CDatabase(std::string server,std::string user,std::string password,std::string database)
 {
 	LOG_INFO("database", "Inside CDatabase constructor");
@@ -22,6 +37,9 @@ CDatabase::CDatabase(std::string server,std::string user,std::string password,st
 	}
 }
 
+// destructor 
+// closes sql
+// destroy mutex, mutex_exe
 CDatabase::~CDatabase()
 {
 	mysql_close(mConnection);
@@ -37,6 +55,7 @@ CDatabase::~CDatabase()
 
 
 // singleton pattern
+// create instance of CDatabase object if not present else return the pointer of present one
 CDatabase* CDatabase::getInstance(std::string server,std::string user,std::string password,std::string database)
 {
 	if(mDBInstance == NULL)
@@ -46,11 +65,13 @@ CDatabase* CDatabase::getInstance(std::string server,std::string user,std::strin
 	return mDBInstance;
 }
 
+// just return the CDatabase object pointer doesn't matter present or not.
 CDatabase* CDatabase::getInstance()
 {
 	return mDBInstance;
 }
 
+// connect to sql and return status
 int CDatabase::connect()
 {
 	if(mConnection==0) return 0;
@@ -64,6 +85,7 @@ int CDatabase::connect()
 	return mConnected;
 }
 
+// execute query for sql with first mutex lock, query, mutex unlock
 int CDatabase::execute(std::string sql_query)
 {
 	if(!connected()) return DB_FAIL;
@@ -92,6 +114,18 @@ int CDatabase::execute(std::string sql_query)
 	return dbResult;
 }
 
+
+// query mysql with sql_query
+// mutex lock
+// query
+// if result found
+// then, 
+// 		push all strings to vector container of string
+// 		push string vector container to vector container of string vector container
+// 		free the memory used by query result
+// else 
+// 		set flag for query fail
+// mutex unlock
 int CDatabase::query(std::string sql_query,VRECORD& record)
 {
 	int res=DBQUERY_SUCCESS;
@@ -152,6 +186,8 @@ int CDatabase::query(std::string sql_query,VRECORD& record)
 	return res;
 } 
 
+
+// wrapper function for query function, directly
 int CDatabase::dbQuery(std::string sql_query,VRECORD& record)
 {
 	return query(sql_query,record);
